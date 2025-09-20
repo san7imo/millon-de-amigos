@@ -240,7 +240,7 @@ export default function Gallery() {
               href="#contact"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="btn-primary bg-mda-sand text-mda-green hover:bg-mda-olive font-bold text-lg px-4 py-3"
+              className="btn-primary bg-mda-sand text-mda-green hover:bg-mda-olive font-bold text-lg px-4 py-2"
             >
               Planifica tu visita
             </motion.a>
