@@ -2,6 +2,9 @@
 'use client'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
+import { GiPlantRoots } from "react-icons/gi";
+import { MdHandshake } from "react-icons/md";
+import { FaRegStar } from "react-icons/fa";
 
 const stats = [
   { number: '15+', label: 'Años de experiencia' },
@@ -14,23 +17,23 @@ const values = [
   {
     title: 'Conexión Natural',
     description: 'Creemos en el poder sanador de la naturaleza y en la importancia de reconectarnos con ella.',
-    icon: '🌱'
+    icon: <GiPlantRoots className="text-4xl text-mda-green " />
   },
   {
     title: 'Hospitalidad Auténtica',
     description: 'Cada huésped es parte de nuestra gran familia. Te recibiremos con los brazos abiertos.',
-    icon: '🤝'
+    icon: <MdHandshake className="text-4xl text-mda-green" />
   },
   {
     title: 'Experiencias Memorables',
     description: 'Nos dedicamos a crear momentos únicos que permanecerán en tu corazón para siempre.',
-    icon: '✨'
+    icon: <FaRegStar className="text-4xl text-mda-green" />
   }
 ]
 
 export default function About() {
   return (
-    <section id="quienes-somos" className="py-20 bg-white">
+    <section id="quienes-somos" className="py-20 bg-mda-green">
       <div className="container mx-auto px-6">
         {/* Main About Content */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
@@ -41,12 +44,12 @@ export default function About() {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
           >
-            <h2 className="text-4xl md:text-5xl font-heading text-mda-green mb-6">
+            <h2 className="text-4xl md:text-5xl font-heading text-mda-sand mb-6">
               Nuestra Historia
             </h2>
-            <div className="space-y-4 text-mda-olive/80 leading-relaxed">
+            <div className="space-y-4 text-mda-sand leading-relaxed">
               <p>
-                <strong className="text-mda-green">Millón de Amigos</strong> nació del sueño de crear un espacio 
+                <strong className="text-mda-sand">Millón de Amigos</strong> nació del sueño de crear un espacio 
                 donde las familias, amigos y visitantes pudieran reconectarse con la naturaleza y entre sí, 
                 lejos del bullicio de la ciudad.
               </p>
@@ -71,9 +74,9 @@ export default function About() {
             >
               <a
                 href="#servicios"
-                className="btn-primary bg-mda-green text-mda-sand hover:bg-mda-olive transition-colors inline-flex items-center"
+                className="btn-primary bg-mda-sand text-mda-green hover:bg-mda-olive transition-colors inline-flex items-center"
               >
-                Conoce nuestros servicios
+                Conoce nuestras experiencias
                 <span className="ml-2">→</span>
               </a>
             </motion.div>
@@ -132,10 +135,10 @@ export default function About() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="text-center"
             >
-              <div className="text-3xl md:text-4xl font-heading font-bold text-mda-green mb-2">
+              <div className="text-3xl md:text-4xl font-heading font-bold text-mda-sand mb-2">
                 {stat.number}
               </div>
-              <div className="text-sm md:text-base text-mda-olive/70">
+              <div className="text-sm md:text-base text-mda-sand">
                 {stat.label}
               </div>
             </motion.div>
@@ -148,12 +151,12 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8 }}
-          className="bg-mda-green rounded-2xl p-8 md:p-12 text-center"
+          className="bg-mda-green  p-8 md:p-12 text-center border-t"
         >
-          <h3 className="text-3xl md:text-4xl font-heading text-white mb-4">
+          <h3 className="text-3xl md:text-4xl font-heading text-mda-sand mb-4">
             Nuestros Valores
           </h3>
-          <p className="text-white max-w-2xl mx-auto">
+          <p className="text-mda-sand max-w-2xl mx-auto">
             Los principios que nos guían y definen la experiencia que ofrecemos a cada visitante.
           </p>
         </motion.div>
@@ -166,9 +169,9 @@ export default function About() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
-              className="text-center p-6 rounded-xl bg-mda-sand/30 hover:bg-mda-sand/50 transition-colors duration-300"
+              className="text-center p-6 rounded-xl bg-mda-sand hover:bg-mda-sand/50 transition-colors duration-300"
             >
-              <div className="text-4xl mb-4">{value.icon}</div>
+              <div className="text-4xl flex justify-center items-center mb-4">{value.icon}</div>
               <h4 className="text-xl font-heading font-bold text-mda-green mb-3">
                 {value.title}
               </h4>

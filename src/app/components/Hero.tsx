@@ -37,7 +37,7 @@ export default function Hero() {
          <Image 
             src="/images/logo.png" 
             alt="Millón de Amigos Logo" 
-            width={400} 
+            width={500} 
             height={150}
             className="mx-auto mb-4 object-contain"
             priority
@@ -62,7 +62,7 @@ export default function Hero() {
         >
           <a 
             href="#contact" 
-            className="btn-primary bg-mda-sand text-mda-olive hover:bg-mda-sand/90 text-lg px-8 py-4 font-bold"
+            className="btn-primary bg-mda-sand text-mda-green hover:bg-mda-sand/90 text-lg px-4 py-4 font-bold"
           >
             Reservar Ahora
           </a>
@@ -70,7 +70,7 @@ export default function Hero() {
             href="#servicios" 
             className="btn-primary border-2 border-mda-sand text-mda-sand bg-transparent hover:bg-mda-sand hover:text-mda-olive text-lg px-8 py-4 font-semibold"
           >
-            Descubrir Servicios
+            Descubrir Experiencias
           </a>
         </motion.div>
       </motion.div>

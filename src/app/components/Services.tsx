@@ -89,44 +89,44 @@ export default function Services() {
               <div className={`
                 p-8 rounded-2xl shadow-lg transition-all duration-300 h-full
                 ${hoveredCard === service.id 
-                  ? 'bg-white shadow-2xl transform -translate-y-2' 
-                  : 'bg-white/70 backdrop-blur-sm shadow-md'
+                  ? 'bg-mda-green shadow-2xl transform -translate-y-2' 
+                  : 'bg-mda-green backdrop-blur-sm shadow-md'
                 }
               `}>
-                {/* Icon */}
-                <div className="text-4xl mb-4 transform transition-transform duration-300 group-hover:scale-110">
-                  {service.icon}
-                </div>
+      
 
                 {/* Title */}
-                <h3 className="text-xl font-heading font-bold text-mda-green mb-3">
+                <h3 className="text-xl font-heading font-bold text-mda-sand mb-3">
                   {service.title}
                 </h3>
 
                 {/* Description */}
-                <p className="text-mda-olive/80 mb-4 leading-relaxed">
+                <p className="text-mda-sand mb-4 leading-relaxed">
                   {service.description}
                 </p>
 
                 {/* Features */}
                 <ul className="space-y-2 mb-6">
                   {service.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-sm text-mda-olive/70">
-                      <span className="w-2 h-2 bg-mda-green rounded-full mr-3 flex-shrink-0"></span>
+                    <li key={idx} className="flex items-center text-sm text-mda-sand">
+                      <span className="w-2 h-2 bg-mda-sand rounded-full mr-3 flex-shrink-0"></span>
                       {feature}
                     </li>
                   ))}
                 </ul>
 
-                {/* CTA */}
+                          {/* CTA */}
+                <div className='flex justify-end'>
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="w-full btn-primary bg-mda-green text-mda-sand hover:bg-mda-olive transition-colors"
+                  className=" btn-primary bg-mda-sand text-mda-green hover:bg-mda-olive transition-colors"
                 >
                   Más información
                 </motion.button>
+                </div>
               </div>
+              
             </motion.div>
           ))}
         </div>
@@ -151,7 +151,7 @@ export default function Services() {
               href="#contact"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="btn-primary bg-mda-sand text-mda-green hover:bg-mda-sand/90 font-bold text-lg px-8 py-4"
+              className="btn-primary bg-mda-sand text-mda-green hover:bg-mda-sand/90 font-bold text-base px-4 py-3"
             >
               Reservar Ahora
             </motion.a>

@@ -14,7 +14,7 @@ const socialLinks = [
 const quickLinks = [
   { name: 'Inicio', href: '#' },
   { name: 'Quiénes Somos', href: '#quienes-somos' },
-  { name: 'Servicios', href: '#servicios' },
+  { name: 'Experiencias', href: '#servicios' },
   { name: 'Galería', href: '#galeria' },
   { name: 'Contacto', href: '#contact' }
 ]
@@ -104,7 +104,7 @@ export default function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <h4 className="text-lg font-heading font-semibold mb-4">Servicios</h4>
+            <h4 className="text-lg font-heading font-semibold mb-4">Experiencias</h4>
             <ul className="space-y-2">
               {services.map((service) => (
                 <li key={service.name}>

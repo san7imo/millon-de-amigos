@@ -23,7 +23,7 @@ export default function Header() {
       transition={{ duration: 0.6, ease: 'easeOut' }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
-          ? 'bg-mda-sand/95 backdrop-blur-md shadow-lg' 
+          ? 'bg-mda-green/80 backdrop-blur-md shadow-lg' 
           : 'bg-transparent'
       }`}
     >
@@ -32,10 +32,10 @@ export default function Header() {
           {/* Logo */}
           <div className="flex items-center">
             <Image 
-              src="/images/logo.png" 
+              src="/images/logonav.png" 
               alt="Millón de Amigos Logo" 
-              width={80} 
-              height={80} 
+              width={40} 
+              height={40} 
               className="object-contain"
               priority
               onError={(e) => {
@@ -48,7 +48,7 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
-            {['Inicio', 'Quiénes Somos', 'Servicios', 'Galería', 'Contacto'].map((item, index) => {
+            {['Inicio', 'Quiénes Somos', 'Experiencias', 'Galería', 'Contacto'].map((item, index) => {
               const href = index === 0 ? '#' : `#${item.toLowerCase().replace(' ', '-').replace('é', 'e').replace('í', 'i')}`
               return (
                 <a
@@ -56,8 +56,8 @@ export default function Header() {
                   href={href}
                   className={`font-medium transition-colors hover:scale-105 transform duration-200 ${
                     isScrolled 
-                      ? 'text-mda-olive hover:text-mda-green' 
-                      : 'text-mda-sand/90 hover:text-mda-sand'
+                      ? 'text-mda-sand hover:text-mda-sand' 
+                      : 'text-mda-sand hover:text-mda-sand'
                   }`}
                 >
                   {item}
@@ -72,8 +72,8 @@ export default function Header() {
               href="#contact"
               className={`btn-primary transition-all hover:scale-105 ${
                 isScrolled
-                  ? 'bg-mda-green text-mda-sand hover:bg-mda-olive'
-                  : 'bg-mda-sand text-mda-olive hover:bg-mda-sand/90'
+                  ? 'bg-mda-sand text-mda-green hover:bg-mda-olive'
+                  : 'bg-mda-sand text-mda-green hover:bg-mda-sand/90'
               }`}
             >
               Reservar Ahora
@@ -106,7 +106,7 @@ export default function Header() {
             className="md:hidden mt-4 py-4 bg-mda-sand/95 backdrop-blur-md rounded-lg shadow-lg"
           >
             <div className="flex flex-col space-y-4 px-4">
-              {['Inicio', 'Quiénes Somos', 'Servicios', 'Galería', 'Contacto'].map((item, index) => {
+              {['Inicio', 'Quiénes Somos', 'Ex', 'Galería', 'Contacto'].map((item, index) => {
                 const href = index === 0 ? '#' : `#${item.toLowerCase().replace(' ', '-').replace('é', 'e').replace('í', 'i')}`
                 return (
                   <a

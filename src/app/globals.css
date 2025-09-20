@@ -37,6 +37,8 @@ html {
   text-decoration: none;
   border: none;
   cursor: pointer;
+  background-color: var(--color-mda-green);
+  color: var(--color-mda-sand);
 }
 
 .btn-primary:hover {
@@ -63,15 +65,15 @@ html {
 
 /* Custom gradient backgrounds */
 .gradient-green {
-  background: linear-gradient(135deg, #1E3F2E 0%, #35372C 100%);
+  background: linear-gradient(135deg, var(--color-mda-green) 0%, var(--color-mda-olive) 100%);
 }
 
 .gradient-sand {
-  background: linear-gradient(135deg, #F2DBB2 0%, #E8D0A0 100%);
+  background: linear-gradient(135deg, var(--color-mda-sand) 0%, #E8D0A0 100%);
 }
 
 .gradient-nature {
-  background: linear-gradient(135deg, #1E3F2E 0%, #2D5A3D 50%, #F2DBB2 100%);
+  background: linear-gradient(135deg, var(--color-mda-green) 0%, #2D5A3D 50%, var(--color-mda-sand) 100%);
 }
 
 /* Text shadows for better readability */
@@ -90,44 +92,48 @@ html {
 }
 
 /* Color Classes */
-.text-mda-green { color: #1E3F2E; }
-.text-mda-olive { color: #35372C; }
-.text-mda-sand { color: #F2DBB2; }
+.text-mda-green { color: var(--color-mda-green); }
+.text-mda-olive { color: var(--color-mda-olive); }
+.text-mda-sand { color: var(--color-mda-sand); }
 
-.bg-mda-green { background-color: #1E3F2E; }
-.bg-mda-olive { background-color: #35372C; }
-.bg-mda-sand { background-color: #F2DBB2; }
+.bg-mda-green { background-color: var(--color-mda-green); }
+.bg-mda-olive { background-color: var(--color-mda-olive); }
+.bg-mda-sand { background-color: var(--color-mda-sand); }
 
-.border-mda-green { border-color: #1E3F2E; }
-.border-mda-olive { border-color: #35372C; }
-.border-mda-sand { border-color: #F2DBB2; }
+.border-mda-green { border-color: var(--color-mda-green); }
+.border-mda-olive { border-color: var(--color-mda-olive); }
+.border-mda-sand { border-color: var(--color-mda-sand); }
 
 /* Opacity variations */
-.text-mda-green\/80 { color: rgba(30, 63, 46, 0.8); }
-.text-mda-olive\/80 { color: rgba(53, 55, 44, 0.8); }
-.text-mda-sand\/80 { color: rgba(242, 219, 178, 0.8); }
-.text-mda-sand\/90 { color: rgba(242, 219, 178, 0.9); }
-.text-mda-sand\/95 { color: rgba(242, 219, 178, 0.95); }
-.text-mda-olive\/70 { color: rgba(53, 55, 44, 0.7); }
-.text-mda-olive\/60 { color: rgba(53, 55, 44, 0.6); }
-.text-mda-sand\/20 { color: rgba(242, 219, 178, 0.2); }
+.text-mda-green\/80 { color: color-mix(in srgb, var(--color-mda-green) 80%, transparent); }
+.text-mda-olive\/80 { color: color-mix(in srgb, var(--color-mda-olive) 80%, transparent); }
+.text-mda-sand\/80 { color: color-mix(in srgb, var(--color-mda-sand) 80%, transparent); }
+.text-mda-sand\/90 { color: color-mix(in srgb, var(--color-mda-sand) 90%, transparent); }
+.text-mda-sand\/95 { color: color-mix(in srgb, var(--color-mda-sand) 95%, transparent); }
+.text-mda-olive\/70 { color: color-mix(in srgb, var(--color-mda-olive) 70%, transparent); }
+.text-mda-olive\/60 { color: color-mix(in srgb, var(--color-mda-olive) 60%, transparent); }
+.text-mda-sand\/20 { color: color-mix(in srgb, var(--color-mda-sand) 20%, transparent); }
 
-.bg-mda-green\/80 { background-color: rgba(30, 63, 46, 0.8); }
-.bg-mda-olive\/80 { background-color: rgba(53, 55, 44, 0.8); }
-.bg-mda-sand\/80 { background-color: rgba(242, 219, 178, 0.8); }
-.bg-mda-sand\/95 { background-color: rgba(242, 219, 178, 0.95); }
-.bg-mda-sand\/30 { background-color: rgba(242, 219, 178, 0.3); }
-.bg-mda-sand\/50 { background-color: rgba(242, 219, 178, 0.5); }
-.bg-mda-sand\/20 { background-color: rgba(242, 219, 178, 0.2); }
-.bg-mda-olive\/10 { background-color: rgba(53, 55, 44, 0.1); }
-.bg-mda-olive\/20 { background-color: rgba(53, 55, 44, 0.2); }
-.bg-mda-green\/20 { background-color: rgba(30, 63, 46, 0.2); }
-.bg-mda-green\/10 { background-color: rgba(30, 63, 46, 0.1); }
+.bg-mda-green\/80 { background-color: color-mix(in srgb, var(--color-mda-green) 80%, transparent); }
+.bg-mda-olive\/80 { background-color: color-mix(in srgb, var(--color-mda-olive) 80%, transparent); }
+.bg-mda-sand\/80 { background-color: color-mix(in srgb, var(--color-mda-sand) 80%, transparent); }
+.bg-mda-sand\/95 { background-color: color-mix(in srgb, var(--color-mda-sand) 95%, transparent); }
+.bg-mda-sand\/30 { background-color: color-mix(in srgb, var(--color-mda-sand) 30%, transparent); }
+.bg-mda-sand\/50 { background-color: color-mix(in srgb, var(--color-mda-sand) 50%, transparent); }
+.bg-mda-sand\/20 { background-color: color-mix(in srgb, var(--color-mda-sand) 20%, transparent); }
+.bg-mda-olive\/10 { background-color: color-mix(in srgb, var(--color-mda-olive) 10%, transparent); }
+.bg-mda-olive\/20 { background-color: color-mix(in srgb, var(--color-mda-olive) 20%, transparent); }
+.bg-mda-green\/20 { background-color: color-mix(in srgb, var(--color-mda-green) 20%, transparent); }
+.bg-mda-green\/10 { background-color: color-mix(in srgb, var(--color-mda-green) 10%, transparent); }
+.bg-gradient-green-white {
+  background: linear-gradient(to bottom, var(--color-mda-green), white);
+}
 
-.border-mda-sand\/30 { border-color: rgba(242, 219, 178, 0.3); }
-.border-mda-sand\/50 { border-color: rgba(242, 219, 178, 0.5); }
-.border-mda-olive\/10 { border-color: rgba(53, 55, 44, 0.1); }
-.border-mda-green\/20 { border-color: rgba(30, 63, 46, 0.2); }
+
+.border-mda-sand\/30 { border-color: color-mix(in srgb, var(--color-mda-sand) 30%, transparent); }
+.border-mda-sand\/50 { border-color: color-mix(in srgb, var(--color-mda-sand) 50%, transparent); }
+.border-mda-olive\/10 { border-color: color-mix(in srgb, var(--color-mda-olive) 10%, transparent); }
+.border-mda-green\/20 { border-color: color-mix(in srgb, var(--color-mda-green) 20%, transparent); }
 
 /* Background transparency for overlays */
 .bg-white\/70 { background-color: rgba(255, 255, 255, 0.7); }
@@ -171,7 +177,7 @@ button, a, input, textarea {
 
 /* Focus styles */
 button:focus, a:focus, input:focus, textarea:focus {
-  outline: 2px solid #1E3F2E;
+  outline: 2px solid var(--color-mda-green);
   outline-offset: 2px;
 }
 
@@ -181,16 +187,16 @@ button:focus, a:focus, input:focus, textarea:focus {
 }
 
 ::-webkit-scrollbar-track {
-  background: #F2DBB2;
+  background: var(--color-mda-sand);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #35372C;
+  background: var(--color-mda-olive);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #1E3F2E;
+  background: var(--color-mda-green);
 }
 
 /* Additional utility classes for common layouts */
@@ -236,4 +242,3 @@ button:focus, a:focus, input:focus, textarea:focus {
 /* Z-index */
 .z-10 { z-index: 10; }
 .z-50 { z-index: 50; }
-

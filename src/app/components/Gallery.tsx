@@ -96,7 +96,7 @@ export default function Gallery() {
     : galleryImages.filter(img => img.category === activeCategory)
 
   return (
-    <section id="galeria" className="py-20 bg-gradient-to-b from-white to-mda-sand/30">
+  <section id="galeria" className="py-20 bg-gradient-green-white">
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <motion.div
@@ -106,10 +106,10 @@ export default function Gallery() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-heading text-mda-green mb-6">
+          <h2 className="text-4xl md:text-5xl font-heading text-mda-sand mb-6">
             Galería de Experiencias
           </h2>
-          <p className="text-lg text-mda-olive/80 max-w-3xl mx-auto">
+          <p className="text-lg text-mda-sand max-w-3xl mx-auto">
             Un vistazo a los espacios y momentos que te esperan en Millón de Amigos. 
             Cada rincón está diseñado para crear recuerdos inolvidables.
           </p>
@@ -135,8 +135,8 @@ export default function Gallery() {
               onClick={() => setActiveCategory(category.id)}
               className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                 activeCategory === category.id
-                  ? 'bg-mda-green text-mda-sand shadow-lg'
-                  : 'bg-white/70 text-mda-olive hover:bg-mda-green/10 border border-mda-green/20'
+                  ? 'bg-mda-sand text-mda-gren shadow-lg'
+                  : 'bg-white/70 text-mda-olive hover:bg-mda-sand/10 border border-mda-sand/20'
               }`}
             >
               {category.name}
@@ -174,7 +174,7 @@ export default function Gallery() {
                 />
                 
                 {/* Overlay */}
-                <div className={`absolute inset-0 bg-gradient-to-t from-mda-green/70 via-mda-green/20 to-transparent transition-opacity duration-300 ${
+                <div className={`absolute inset-0 bg-gradient-to-t from-black to-transparent transition-opacity duration-300 ${
                   hoveredImage === image.id ? 'opacity-100' : 'opacity-0'
                 }`} />
 
@@ -182,10 +182,10 @@ export default function Gallery() {
                 <div className={`absolute bottom-0 left-0 right-0 p-4 transform transition-all duration-300 ${
                   hoveredImage === image.id ? 'translate-y-0 opacity-100' : 'translate-y-2 opacity-0'
                 }`}>
-                  <h3 className="text-black font-heading font-semibold text-lg mb-1 text-shadow">
+                  <h3 className="text-mda-sand font-heading font-semibold text-lg mb-1 text-shadow">
                     {image.title}
                   </h3>
-                  <p className="text-mda-sand/90 text-sm text-black capitalize font-medium">
+                  <p className="text-mda-sand/90 text-sm text-mda-sand capitalize font-medium">
                     {image.category}
                   </p>
                 </div>
@@ -228,11 +228,11 @@ export default function Gallery() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-center mt-16"
         >
-          <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-mda-sand/50">
-            <h3 className="text-2xl md:text-3xl font-heading text-mda-green mb-4">
+          <div className="bg-mda-green backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-mda-sand/50">
+            <h3 className="text-2xl md:text-3xl font-heading text-mda-sand mb-4">
               ¿Te gustó lo que viste?
             </h3>
-            <p className="text-mda-olive/80 mb-8 max-w-2xl mx-auto">
+            <p className="text-mda-sand mb-8 max-w-2xl mx-auto">
               Las fotos no le hacen justicia a la experiencia real. 
               Ven y vive cada momento en persona.
             </p>
@@ -240,7 +240,7 @@ export default function Gallery() {
               href="#contact"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="btn-primary bg-mda-green text-mda-sand hover:bg-mda-olive font-bold text-lg px-8 py-4"
+              className="btn-primary bg-mda-sand text-mda-green hover:bg-mda-olive font-bold text-lg px-4 py-3"
             >
               Planifica tu visita
             </motion.a>

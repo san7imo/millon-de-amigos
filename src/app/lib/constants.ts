@@ -25,7 +25,7 @@ export const SOCIAL_LINKS = {
 export const NAV_ITEMS = [
   { name: 'Inicio', href: '#', id: 'inicio' },
   { name: 'Quiénes Somos', href: '#quienes-somos', id: 'about' },
-  { name: 'Servicios', href: '#servicios', id: 'services' },
+  { name: 'Experiencias', href: '#servicios', id: 'services' },
   { name: 'Galería', href: '#galeria', id: 'gallery' },
   { name: 'Contacto', href: '#contact', id: 'contact' }
 ] as const
@@ -82,7 +82,7 @@ export const PLACEHOLDER_CONTENT = {
   },
   cta: {
     primary: 'Reservar Ahora',
-    secondary: 'Ver Servicios',
+    secondary: 'Ver Experiencias',
     contact: 'Contáctanos'
   }
 } as const
