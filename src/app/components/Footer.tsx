@@ -1,12 +1,14 @@
 // app/components/Footer.tsx
 'use client'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
+import { FaFacebookF, FaInstagram, FaWhatsapp, FaTiktok, FaMapMarkerAlt, FaPhone, FaEnvelope } from 'react-icons/fa'
 
 const socialLinks = [
-  { name: 'Facebook', href: '#', icon: '📘' },
-  { name: 'Instagram', href: '#', icon: '📷' },
-  { name: 'WhatsApp', href: 'https://wa.me/573001234567', icon: '💬' },
-  { name: 'TikTok', href: '#', icon: '🎵' }
+  { name: 'Facebook', href: '#', icon: FaFacebookF, color: 'hover:bg-blue-600' },
+  { name: 'Instagram', href: '#', icon: FaInstagram, color: 'hover:bg-pink-600' },
+  { name: 'WhatsApp', href: 'https://wa.me/34608529493', icon: FaWhatsapp, color: 'hover:bg-green-600' },
+  { name: 'TikTok', href: '#', icon: FaTiktok, color: 'hover:bg-black' }
 ]
 
 const quickLinks = [
@@ -41,24 +43,31 @@ export default function Footer() {
             transition={{ duration: 0.6 }}
             className="lg:col-span-1"
           >
-            <h3 className="text-2xl font-heading font-bold mb-4">Millón de Amigos</h3>
+            <Image 
+              src="/images/logo.png" 
+              alt="Millón de Amigos Logo" 
+              width={150} 
+              height={100} 
+              className="object-contain mb-4"
+              priority
+            />
             <p className="text-mda-sand/80 mb-6 leading-relaxed">
               Tu centro vacacional en la naturaleza. Donde cada momento se convierte 
               en un recuerdo inolvidable.
             </p>
             <div className="space-y-2 text-sm">
               <div className="flex items-center">
-                <span className="mr-2">📍</span>
+                <FaMapMarkerAlt className="mr-3 text-mda-sand/80" />
                 <span className="text-mda-sand/80">Paseo Santa Maria de la Cabeza 4, Local 1</span>
               </div>
               <div className="flex items-center">
-                <span className="mr-2">📞</span>
-                <a href="tel:+573001234567" className="text-mda-sand/80 hover:text-mda-sand transition-colors">
+                <FaPhone className="mr-3 text-mda-sand/80" />
+                <a href="tel:+34608529493" className="text-mda-sand/80 hover:text-mda-sand transition-colors">
                   +34 608 52 94 93
                 </a>
               </div>
               <div className="flex items-center">
-                <span className="mr-2">📧</span>
+                <FaEnvelope className="mr-3 text-mda-sand/80" />
                 <a href="mailto:info@millondeamigos.com" className="text-mda-sand/80 hover:text-mda-sand transition-colors">
                   info@millondeamigos.com
                 </a>
@@ -119,18 +128,21 @@ export default function Footer() {
           >
             <h4 className="text-lg font-heading font-semibold mb-4">Síguenos</h4>
             <div className="flex flex-wrap gap-3 mb-6">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.name}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 bg-mda-sand/20 hover:bg-mda-sand/30 rounded-full flex items-center justify-center transition-colors duration-200"
-                  title={social.name}
-                >
-                  <span className="text-lg">{social.icon}</span>
-                </a>
-              ))}
+              {socialLinks.map((social) => {
+                const IconComponent = social.icon
+                return (
+                  <a
+                    key={social.name}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`w-10 h-10 bg-mda-sand/20 ${social.color} rounded-full flex items-center justify-center transition-all duration-200 group transform hover:scale-110`}
+                    title={social.name}
+                  >
+                    <IconComponent className="w-4 h-4 text-mda-sand" />
+                  </a>
+                )
+              })}
             </div>
 
             {/* Newsletter Signup */}
@@ -186,14 +198,15 @@ export default function Footer() {
         className="fixed bottom-6 right-6 z-50"
       >
         <a
-          href="https://wa.me/573001234567"
+          href="https://wa.me/34608529493"
           target="_blank"
           rel="noopener noreferrer"
-          className="w-14 h-14 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 group"
+          className="w-14 h-14 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 group animate-pulse hover:animate-none"
           title="Contactar por WhatsApp"
         >
-          <span className="text-2xl text-white group-hover:scale-110 transition-transform">💬</span>
+          <FaWhatsapp className="text-2xl text-white group-hover:scale-110 transition-transform" />
         </a>
       </motion.div>
     </footer>
-    )  }
+  )
+}

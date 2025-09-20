@@ -1,6 +1,7 @@
 // app/components/Hero.tsx
 'use client'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 
 export default function Hero() {
   return (
@@ -33,7 +34,15 @@ export default function Hero() {
           transition={{ duration: 1.2, delay: 0.2 }}
           className="text-5xl md:text-7xl font-heading text-mda-sand leading-tight mb-6 text-shadow"
         >
-          Millón de Amigos
+         <Image 
+            src="/images/logo.png" 
+            alt="Millón de Amigos Logo" 
+            width={400} 
+            height={150}
+            className="mx-auto mb-4 object-contain"
+            priority
+          />
+  
         </motion.h1>
         
         <motion.p 

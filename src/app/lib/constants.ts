@@ -4,7 +4,7 @@
 export const CONTACT_INFO = {
   phone: '+573001234567',
   email: 'info@millondeamigos.com',
-  whatsapp: 'https://wa.me/573001234567',
+  whatsapp: 'https://wa.me/34608529493',
   address: {
     city: 'Medellín',
     state: 'Antioquia',
