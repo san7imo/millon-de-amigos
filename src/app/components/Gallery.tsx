@@ -2,82 +2,89 @@
 'use client'
 import { motion } from 'framer-motion'
 import { useState } from 'react'
+import Image from 'next/image'
 
-// Placeholder images data - replace with real images later
+// Imágenes reales de la galería
 const galleryImages = [
   {
     id: 1,
-    title: 'Piscina Principal',
-    category: 'piscina',
-    placeholder: '🏊‍♀️',
-    color: 'from-blue-400 to-blue-600'
+    title: 'Diversión Familiar',
+    category: 'familia',
+    image: '/images/gallery1-familia.jpg'
   },
   {
     id: 2,
-    title: 'Zona de Eventos',
-    category: 'eventos',
-    placeholder: '🎉',
-    color: 'from-purple-400 to-purple-600'
+    title: 'Momentos en Familia',
+    category: 'familia',
+    image: '/images/gallery2-familia.jpg'
   },
   {
     id: 3,
-    title: 'Senderos Naturales',
-    category: 'naturaleza',
-    placeholder: '🌿',
-    color: 'from-green-400 to-green-600'
+    title: 'Tiempo de Calidad',
+    category: 'familia',
+    image: '/images/gallery3-familia.jpg'
   },
   {
     id: 4,
-    title: 'Zona Infantil',
+    title: 'Reunión Familiar',
     category: 'familia',
-    placeholder: '🎠',
-    color: 'from-yellow-400 to-orange-500'
+    image: '/images/gallery4-familia.jpg'
   },
   {
     id: 5,
-    title: 'Área de Descanso',
-    category: 'relax',
-    placeholder: '🧘‍♀️',
-    color: 'from-teal-400 to-teal-600'
+    title: 'Zona Infantil',
+    category: 'niños',
+    image: '/images/gallery5-niños.jpg'
   },
   {
     id: 6,
-    title: 'Granja Interactiva',
-    category: 'naturaleza',
-    placeholder: '🐄',
-    color: 'from-amber-400 to-amber-600'
+    title: 'Diversión para Niños',
+    category: 'niños',
+    image: '/images/gallery6-niños.jpg'
   },
   {
     id: 7,
-    title: 'Canchas Deportivas',
-    category: 'deportes',
-    placeholder: '⚽',
-    color: 'from-red-400 to-red-600'
+    title: 'Entretenimiento Infantil',
+    category: 'niños',
+    image: '/images/gallery7-niños.jpg'
   },
   {
     id: 8,
-    title: 'Salones Cubiertos',
-    category: 'eventos',
-    placeholder: '🏛️',
-    color: 'from-indigo-400 to-indigo-600'
+    title: 'Familia Unida',
+    category: 'familia',
+    image: '/images/gallery8-familia.jpg'
   },
   {
     id: 9,
-    title: 'Jacuzzi Premium',
-    category: 'relax',
-    placeholder: '🛁',
-    color: 'from-pink-400 to-pink-600'
+    title: 'Piscina Principal',
+    category: 'piscina',
+    image: '/images/gallery9-piscina.jpg'
+  },
+  {
+    id: 10,
+    title: 'Área de Piscina',
+    category: 'piscina',
+    image: '/images/gallery10-piscina.jpg'
+  },
+  {
+    id: 11,
+    title: 'Actividades Infantiles',
+    category: 'niños',
+    image: '/images/gallery11-niños.jpg'
+  },
+  {
+    id: 12,
+    title: 'Zona de Relax',
+    category: 'piscina',
+    image: '/images/gallery12-piscina.jpg'
   }
 ]
 
 const categories = [
   { id: 'all', name: 'Todas', count: galleryImages.length },
-  { id: 'piscina', name: 'Piscina', count: galleryImages.filter(img => img.category === 'piscina').length },
-  { id: 'eventos', name: 'Eventos', count: galleryImages.filter(img => img.category === 'eventos').length },
-  { id: 'naturaleza', name: 'Naturaleza', count: galleryImages.filter(img => img.category === 'naturaleza').length },
   { id: 'familia', name: 'Familia', count: galleryImages.filter(img => img.category === 'familia').length },
-  { id: 'relax', name: 'Relax', count: galleryImages.filter(img => img.category === 'relax').length },
-  { id: 'deportes', name: 'Deportes', count: galleryImages.filter(img => img.category === 'deportes').length }
+  { id: 'piscina', name: 'Piscina', count: galleryImages.filter(img => img.category === 'piscina').length },
+  { id: 'niños', name: 'Niños', count: galleryImages.filter(img => img.category === 'niños').length }
 ]
 
 export default function Gallery() {
@@ -157,13 +164,17 @@ export default function Gallery() {
               className="group relative cursor-pointer"
             >
               <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-lg">
-                {/* Placeholder Image */}
-                <div className={`w-full h-full bg-gradient-to-br ${image.color} flex items-center justify-center text-6xl text-white/30`}>
-                  {image.placeholder}
-                </div>
+                {/* Imagen real */}
+                <Image
+                  src={image.image} 
+                  alt={image.title}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  width={400}
+                  height={300}
+                />
                 
                 {/* Overlay */}
-                <div className={`absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent transition-opacity duration-300 ${
+                <div className={`absolute inset-0 bg-gradient-to-t from-mda-green/70 via-mda-green/20 to-transparent transition-opacity duration-300 ${
                   hoveredImage === image.id ? 'opacity-100' : 'opacity-0'
                 }`} />
 
@@ -171,10 +182,10 @@ export default function Gallery() {
                 <div className={`absolute bottom-0 left-0 right-0 p-4 transform transition-all duration-300 ${
                   hoveredImage === image.id ? 'translate-y-0 opacity-100' : 'translate-y-2 opacity-0'
                 }`}>
-                  <h3 className="text-white font-heading font-semibold text-lg mb-1">
+                  <h3 className="text-black font-heading font-semibold text-lg mb-1 text-shadow">
                     {image.title}
                   </h3>
-                  <p className="text-white/80 text-sm capitalize">
+                  <p className="text-mda-sand/90 text-sm text-black capitalize font-medium">
                     {image.category}
                   </p>
                 </div>
@@ -183,8 +194,8 @@ export default function Gallery() {
                 <div className={`absolute top-4 right-4 transition-all duration-300 ${
                   hoveredImage === image.id ? 'opacity-100 scale-100' : 'opacity-0 scale-0'
                 }`}>
-                  <button className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-colors">
-                    <span className="text-lg">👁️</span>
+                  <button className="w-10 h-10 bg-mda-sand/80 backdrop-blur-sm rounded-full flex items-center justify-center text-mda-olive hover:bg-mda-sand transition-colors shadow-lg">
+                    <span className="text-sm font-bold">👁️</span>
                   </button>
                 </div>
               </div>

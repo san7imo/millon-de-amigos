@@ -1,6 +1,7 @@
 // app/components/About.tsx
 'use client'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 
 const stats = [
   { number: '15+', label: 'Años de experiencia' },
@@ -79,6 +80,7 @@ export default function About() {
           </motion.div>
 
           {/* Image Placeholder */}
+          {/* Imagen Real - Reemplaza la sección de "Image Placeholder" */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -86,13 +88,16 @@ export default function About() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="relative"
           >
-            {/* Placeholder image - replace with real image later */}
-            <div className="aspect-[4/3] rounded-2xl bg-gradient-to-br from-green-400 via-green-500 to-green-600 shadow-lg overflow-hidden">
-              <div className="w-full h-full flex items-center justify-center text-white/20 text-6xl">
-                🏞️
-              </div>
-              {/* Overlay for future real image */}
-              <div className="absolute inset-0 bg-gradient-to-t from-mda-green/20 to-transparent rounded-2xl"></div>
+            <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
+              <Image
+                src="/images/nuestraHistoria.jpg" 
+                alt="Nuestra Historia - Millón de Amigos" 
+                className="w-full h-full object-cover"
+                width={600}
+                height={450}
+              />
+              {/* Overlay sutil */}
+              <div className="absolute inset-0 bg-gradient-to-t from-mda-green/30 to-transparent rounded-2xl"></div>
             </div>
             
             {/* Floating card */}
@@ -101,7 +106,7 @@ export default function About() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.5 }}
-              className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-xl border border-mda-sand/50"
+              className="absolute -bottom-6 -left-6 bg-white/95 backdrop-blur-custom p-6 rounded-xl shadow-2xl border border-mda-sand/50"
             >
               <div className="text-2xl font-heading text-mda-green font-bold">15+</div>
               <div className="text-sm text-mda-olive/70">Años creando</div>
@@ -143,12 +148,12 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-12"
+          className="bg-mda-green rounded-2xl p-8 md:p-12 text-center"
         >
-          <h3 className="text-3xl md:text-4xl font-heading text-mda-green mb-4">
+          <h3 className="text-3xl md:text-4xl font-heading text-white mb-4">
             Nuestros Valores
           </h3>
-          <p className="text-mda-olive/80 max-w-2xl mx-auto">
+          <p className="text-white max-w-2xl mx-auto">
             Los principios que nos guían y definen la experiencia que ofrecemos a cada visitante.
           </p>
         </motion.div>

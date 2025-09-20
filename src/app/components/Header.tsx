@@ -2,6 +2,7 @@
 'use client'
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -30,11 +31,19 @@ export default function Header() {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <div className="flex items-center">
-            <h2 className={`text-2xl font-heading font-bold transition-colors ${
-              isScrolled ? 'text-mda-green' : 'text-mda-sand'
-            }`}>
-              Millón de Amigos
-            </h2>
+            <Image 
+              src="/images/logo.png" 
+              alt="Millón de Amigos Logo" 
+              width={80} 
+              height={80} 
+              className="object-contain"
+              priority
+              onError={(e) => {
+                console.log('Error loading logo:', e)
+                // Fallback: mostrar texto si la imagen no carga
+                e.currentTarget.style.display = 'none'
+              }}
+            />
           </div>
 
           {/* Desktop Navigation */}

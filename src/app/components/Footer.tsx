@@ -49,12 +49,12 @@ export default function Footer() {
             <div className="space-y-2 text-sm">
               <div className="flex items-center">
                 <span className="mr-2">📍</span>
-                <span className="text-mda-sand/80">Medellín, Antioquia, Colombia</span>
+                <span className="text-mda-sand/80">Paseo Santa Maria de la Cabeza 4, Local 1</span>
               </div>
               <div className="flex items-center">
                 <span className="mr-2">📞</span>
                 <a href="tel:+573001234567" className="text-mda-sand/80 hover:text-mda-sand transition-colors">
-                  +57 300 123 4567
+                  +34 608 52 94 93
                 </a>
               </div>
               <div className="flex items-center">

@@ -62,7 +62,7 @@ export default function Services() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-heading text-mda-green mb-6">
-            Nuestros Servicios
+            Nuestras Experiencias
           </h2>
           <p className="text-lg text-mda-olive/80 max-w-3xl mx-auto">
             Descubre todo lo que tenemos preparado para hacer de tu visita una experiencia inolvidable. 

@@ -1,0 +1,239 @@
+/* Tailwind v4+ Compatible globals.css */
+
+/* CSS Variables for Color Palette */
+:root {
+  --color-mda-green: #1E3F2E;
+  --color-mda-olive: #35372C;
+  --color-mda-sand: #F2DBB2;
+}
+
+/* Base Styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Button Primary Styles */
+.btn-primary {
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-weight: 600;
+  text-align: center;
+  display: inline-block;
+  transition: all 0.3s ease;
+  transform: scale(1);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.btn-primary:active {
+  transform: scale(0.95);
+}
+
+/* Font Heading Styles */
+.font-heading {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-weight: 700;
+}
+
+/* Container Styles */
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 80rem;
+}
+
+/* Custom gradient backgrounds */
+.gradient-green {
+  background: linear-gradient(135deg, #1E3F2E 0%, #35372C 100%);
+}
+
+.gradient-sand {
+  background: linear-gradient(135deg, #F2DBB2 0%, #E8D0A0 100%);
+}
+
+.gradient-nature {
+  background: linear-gradient(135deg, #1E3F2E 0%, #2D5A3D 50%, #F2DBB2 100%);
+}
+
+/* Text shadows for better readability */
+.text-shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.text-shadow-light {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Backdrop blur utility */
+.backdrop-blur-custom {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Color Classes */
+.text-mda-green { color: #1E3F2E; }
+.text-mda-olive { color: #35372C; }
+.text-mda-sand { color: #F2DBB2; }
+
+.bg-mda-green { background-color: #1E3F2E; }
+.bg-mda-olive { background-color: #35372C; }
+.bg-mda-sand { background-color: #F2DBB2; }
+
+.border-mda-green { border-color: #1E3F2E; }
+.border-mda-olive { border-color: #35372C; }
+.border-mda-sand { border-color: #F2DBB2; }
+
+/* Opacity variations */
+.text-mda-green\/80 { color: rgba(30, 63, 46, 0.8); }
+.text-mda-olive\/80 { color: rgba(53, 55, 44, 0.8); }
+.text-mda-sand\/80 { color: rgba(242, 219, 178, 0.8); }
+.text-mda-sand\/90 { color: rgba(242, 219, 178, 0.9); }
+.text-mda-sand\/95 { color: rgba(242, 219, 178, 0.95); }
+.text-mda-olive\/70 { color: rgba(53, 55, 44, 0.7); }
+.text-mda-olive\/60 { color: rgba(53, 55, 44, 0.6); }
+.text-mda-sand\/20 { color: rgba(242, 219, 178, 0.2); }
+
+.bg-mda-green\/80 { background-color: rgba(30, 63, 46, 0.8); }
+.bg-mda-olive\/80 { background-color: rgba(53, 55, 44, 0.8); }
+.bg-mda-sand\/80 { background-color: rgba(242, 219, 178, 0.8); }
+.bg-mda-sand\/95 { background-color: rgba(242, 219, 178, 0.95); }
+.bg-mda-sand\/30 { background-color: rgba(242, 219, 178, 0.3); }
+.bg-mda-sand\/50 { background-color: rgba(242, 219, 178, 0.5); }
+.bg-mda-sand\/20 { background-color: rgba(242, 219, 178, 0.2); }
+.bg-mda-olive\/10 { background-color: rgba(53, 55, 44, 0.1); }
+.bg-mda-olive\/20 { background-color: rgba(53, 55, 44, 0.2); }
+.bg-mda-green\/20 { background-color: rgba(30, 63, 46, 0.2); }
+.bg-mda-green\/10 { background-color: rgba(30, 63, 46, 0.1); }
+
+.border-mda-sand\/30 { border-color: rgba(242, 219, 178, 0.3); }
+.border-mda-sand\/50 { border-color: rgba(242, 219, 178, 0.5); }
+.border-mda-olive\/10 { border-color: rgba(53, 55, 44, 0.1); }
+.border-mda-green\/20 { border-color: rgba(30, 63, 46, 0.2); }
+
+/* Background transparency for overlays */
+.bg-white\/70 { background-color: rgba(255, 255, 255, 0.7); }
+.bg-white\/60 { background-color: rgba(255, 255, 255, 0.6); }
+.bg-white\/95 { background-color: rgba(255, 255, 255, 0.95); }
+.bg-black\/20 { background-color: rgba(0, 0, 0, 0.2); }
+
+/* Animation utilities */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Smooth transitions for all interactive elements */
+button, a, input, textarea {
+  transition: all 0.3s ease;
+}
+
+/* Focus styles */
+button:focus, a:focus, input:focus, textarea:focus {
+  outline: 2px solid #1E3F2E;
+  outline-offset: 2px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F2DBB2;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #35372C;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1E3F2E;
+}
+
+/* Additional utility classes for common layouts */
+.flex { display: flex; }
+.flex-col { flex-direction: column; }
+.items-center { align-items: center; }
+.justify-center { justify-content: center; }
+.text-center { text-align: center; }
+.relative { position: relative; }
+.absolute { position: absolute; }
+.fixed { position: fixed; }
+.inset-0 { top: 0; right: 0; bottom: 0; left: 0; }
+
+/* Responsive padding and margins */
+.px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
+.py-4 { padding-top: 1rem; padding-bottom: 1rem; }
+.py-20 { padding-top: 5rem; padding-bottom: 5rem; }
+.mb-6 { margin-bottom: 1.5rem; }
+.mb-8 { margin-bottom: 2rem; }
+
+/* Rounded corners */
+.rounded-full { border-radius: 9999px; }
+.rounded-xl { border-radius: 0.75rem; }
+.rounded-2xl { border-radius: 1rem; }
+
+/* Shadows */
+.shadow-lg { 
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); 
+}
+.shadow-xl { 
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); 
+}
+.shadow-2xl { 
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); 
+}
+
+/* Overflow */
+.overflow-hidden { overflow: hidden; }
+
+/* Object fit */
+.object-cover { object-fit: cover; }
+
+/* Z-index */
+.z-10 { z-index: 10; }
+.z-50 { z-index: 50; }
+

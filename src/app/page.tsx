@@ -14,8 +14,8 @@ export default function Page() {
         <Hero />
         <About />
         <Services />
-        
-        {/* Temporary Contact Section - will be replaced with full component later */}
+        <Gallery />
+                {/* Temporary Contact Section - will be replaced with full component later */}
         <section id="contact" className="py-20 bg-mda-green">
           <div className="container mx-auto px-6 text-center">
             <h2 className="text-4xl md:text-5xl font-heading text-mda-sand mb-6">
@@ -43,7 +43,6 @@ export default function Page() {
             </div>
           </div>
         </section>
-        <Gallery />
       </main>
       <Footer />
     </>
