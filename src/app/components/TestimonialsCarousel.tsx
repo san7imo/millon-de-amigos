@@ -41,7 +41,7 @@ export default function TestimonialsCarousel() {
 
   return (
     <section className="py-16 bg-white overflow-hidden">
-      <h2 className="text-3xl font-bold text-center text-mda-green mb-10">
+      <h2 className="text-3xl font-bold text-center text-mda-green mb-12">
         Testimonios de nuestros visitantes
       </h2>
 
@@ -54,12 +54,32 @@ export default function TestimonialsCarousel() {
           {[...testimonials, ...testimonials].map((t, index) => (
             <motion.div
               key={index}
-              whileHover={{ scale: 1.05 }}
-              className="min-w-[300px] max-w-sm flex-shrink-0 bg-mda-green text-white rounded-2xl shadow-lg p-6"
+              whileHover={{ scale: 1.03 }}
+              className="min-w-[320px] max-w-sm flex-shrink-0 bg-mda-green/10 border border-gray-200 rounded-2xl shadow-md p-6 relative"
             >
-              <p className="text-lg italic mb-4">“{t.text}”</p>
-              <h4 className="text-xl font-semibold">{t.name}</h4>
-              <p className="text-sm opacity-90">{t.role}</p>
+              {/* Comillas decorativas */}
+              <span className="absolute -top-4 -left-2 text-6xl text-mda-green opacity-20 select-none">
+                “
+              </span>
+
+              {/* Texto del testimonio */}
+              <p className="text-lg text-gray-700 italic mb-6 relative z-10">
+                “{t.text}”
+              </p>
+
+              {/* Info del autor */}
+              <div className="flex items-center space-x-4">
+                {/* Avatar circular (inicial del nombre) */}
+                <div className="w-12 h-12 rounded-full bg-mda-green/20 flex items-center justify-center text-mda-green font-bold">
+                  {t.name[0]}
+                </div>
+                <div>
+                  <h4 className="text-base font-semibold text-gray-900">
+                    {t.name}
+                  </h4>
+                  <p className="text-sm text-gray-500">{t.role}</p>
+                </div>
+              </div>
             </motion.div>
           ))}
         </div>
