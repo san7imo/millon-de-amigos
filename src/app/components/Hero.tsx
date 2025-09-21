@@ -1,11 +1,10 @@
 // app/components/Hero.tsx
 'use client'
 import { motion } from 'framer-motion'
-import Image from 'next/image'
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-end justify-center overflow-hidden">
       {/* Video de fondo */}
       <div className="absolute inset-0">
         <video 
@@ -26,25 +25,8 @@ export default function Hero() {
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.2, ease: 'easeOut' }}
-        className="relative z-10 text-center px-6 max-w-4xl"
-      >
-        <motion.h1 
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.2, delay: 0.2 }}
-          className="text-5xl md:text-7xl font-heading text-mda-sand leading-tight mb-6 text-shadow"
-        >
-         <Image 
-            src="/images/logo.png" 
-            alt="Millón de Amigos Logo" 
-            width={500} 
-            height={150}
-            className="mx-auto mb-4 object-contain"
-            priority
-          />
-  
-        </motion.h1>
-        
+        className="relative z-10 text-center px-6 max-w-4xl mb-16"
+      >        
         <motion.p 
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -61,14 +43,8 @@ export default function Hero() {
           className="flex flex-col sm:flex-row justify-center gap-4"
         >
           <a 
-            href="#contact" 
-            className="btn-primary bg-mda-sand text-mda-green hover:bg-mda-sand/90 text-lg px-4 py-4 font-bold"
-          >
-            Reservar Ahora
-          </a>
-          <a 
             href="#servicios" 
-            className="btn-primary border-2 border-mda-sand text-mda-sand bg-transparent hover:bg-mda-sand hover:text-mda-olive text-lg px-8 py-4 font-semibold"
+            className="btn-primary border-2 border-mda-sand text-mda-sand bg-transparent hover:bg-mda-sand hover:text-mda-olive text-lg px-6 py-2 font-semibold"
           >
             Descubrir Experiencias
           </a>

@@ -5,7 +5,6 @@ import About from './components/About'
 import Services from './components/Services'
 import Gallery from './components/Gallery'
 import Footer from './components/Footer'
-import { FaWhatsapp } from 'react-icons/fa'
 
 export default function Page() {
   return (
@@ -33,13 +32,7 @@ export default function Page() {
               >
                 📞 Llamar ahora
               </a>
-              <a 
-                href="https://wa.me/34608529493" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="btn-primary border-2 border-mda-sand text-mda-sand hover:bg-mda-sand hover:text-mda-green transition-colors flex items-center justify-center gap-2"
-              > <FaWhatsapp className="text-2xl text-white group-hover:scale-110 transition-transform" /> WhatsApp
-              </a>
+    
             </div>
           </div>
         </section>

@@ -124,7 +124,7 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20"
+          className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20 py-10"
         >
           {stats.map((stat, index) => (
             <motion.div
@@ -151,7 +151,7 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8 }}
-          className="bg-mda-green  p-8 md:p-12 text-center border-t"
+          className="bg-mda-green  p-8 md:p-12 text-center"
         >
           <h3 className="text-3xl md:text-4xl font-heading text-mda-sand mb-4">
             Nuestros Valores

@@ -8,28 +8,28 @@ const services = [
     id: 1,
     title: 'Piscina & Relax',
     description: 'Disfruta de nuestras piscinas con agua cristalina, zonas de descanso y áreas verdes para relajarte completamente.',
-    features: ['Piscina principal', 'Zona infantil', 'Jacuzzi', 'Áreas de sombra'],
+    features: ['Piscinas Climatizadas', 'Zona infantil', 'Jacuzzi', 'Áreas de sombra'],
     icon: '🏊‍♂️'
   },
   {
     id: 2,
     title: 'Actividades Familiares',
     description: 'Espacios diseñados para que toda la familia disfrute: desde los más pequeños hasta los abuelos.',
-    features: ['Parque infantil', 'Canchas deportivas', 'Zona de juegos', 'Senderos naturales'],
+    features: ['Parque infantil', 'Canchas deportivas', 'Zona de juegos', 'Senderos naturales', 'Restaurante'],
     icon: '👨‍👩‍👧‍👦'
   },
   {
     id: 3,
     title: 'Eventos & Retiros',
     description: 'El lugar perfecto para celebraciones especiales, reuniones corporativas y retiros espirituales.',
-    features: ['Salones de eventos', 'Catering disponible', 'Hospedaje', 'Espacios al aire libre'],
+    features: ['Salones de eventos', 'Hospedaje', 'Escenarios eventos artisticos'],
     icon: '🎉'
   },
   {
     id: 4,
     title: 'Granja & Naturaleza',
     description: 'Conecta con la naturaleza en nuestra granja interactiva y senderos ecológicos.',
-    features: ['Animales de granja', 'Huerto orgánico', 'Senderos naturales', 'Avistamiento de aves'],
+    features: ['Granja Escuela', 'Huerto orgánico', 'Senderos naturales', 'Avistamiento de aves', 'Plaza de toros', 'Centro de equitación'],
     icon: '🌿'
   },
   {

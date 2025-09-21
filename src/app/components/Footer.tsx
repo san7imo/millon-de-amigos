@@ -2,18 +2,17 @@
 'use client'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import { FaFacebookF, FaInstagram, FaWhatsapp, FaTiktok, FaMapMarkerAlt, FaPhone, FaEnvelope } from 'react-icons/fa'
+import { FaFacebookF, FaInstagram, FaWhatsapp, FaTiktok, FaMapMarkerAlt, FaMobile, FaEnvelope } from 'react-icons/fa'
 
 const socialLinks = [
   { name: 'Facebook', href: '#', icon: FaFacebookF, color: 'hover:bg-blue-600' },
   { name: 'Instagram', href: '#', icon: FaInstagram, color: 'hover:bg-pink-600' },
-  { name: 'WhatsApp', href: 'https://wa.me/34608529493', icon: FaWhatsapp, color: 'hover:bg-green-600' },
   { name: 'TikTok', href: '#', icon: FaTiktok, color: 'hover:bg-black' }
 ]
 
 const quickLinks = [
   { name: 'Inicio', href: '#' },
-  { name: 'Quiénes Somos', href: '#quienes-somos' },
+  { name: 'Millón de Amigos', href: '#quienes-somos' },
   { name: 'Experiencias', href: '#servicios' },
   { name: 'Galería', href: '#galeria' },
   { name: 'Contacto', href: '#contact' }
@@ -61,7 +60,7 @@ export default function Footer() {
                 <span className="text-mda-sand/80">Paseo Santa Maria de la Cabeza 4, Local 1</span>
               </div>
               <div className="flex items-center">
-                <FaPhone className="mr-3 text-mda-sand/80" />
+                <FaMobile className="mr-3 text-mda-sand/80" />
                 <a href="tel:+34608529493" className="text-mda-sand/80 hover:text-mda-sand transition-colors">
                   +34 608 52 94 93
                 </a>
@@ -136,7 +135,7 @@ export default function Footer() {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`w-10 h-10 bg-mda-sand/20 ${social.color} rounded-full flex items-center justify-center transition-all duration-200 group transform hover:scale-110`}
+                    className={`w-10 h-10 bg-transparent ${social.color} rounded-full flex items-center justify-center transition-all duration-200 group transform hover:scale-110`}
                     title={social.name}
                   >
                     <IconComponent className="w-4 h-4 text-mda-sand" />
@@ -166,7 +165,7 @@ export default function Footer() {
         </div>
 
         {/* Divider */}
-        <div className="border-t border-mda-sand/20 my-8"></div>
+        <div className="my-8"></div>
 
         {/* Bottom Section */}
         <motion.div
@@ -177,7 +176,7 @@ export default function Footer() {
           className="flex flex-col md:flex-row justify-between items-center gap-4"
         >
           <div className="text-sm text-mda-sand/70">
-            © {currentYear} Millón de Amigos. Todos los derechos reservados.
+            Copyright {currentYear} © Millón de Amigos. All rights Reserved.
           </div>
           <div className="flex gap-6 text-sm">
             <a href="#" className="text-mda-sand/70 hover:text-mda-sand transition-colors">
@@ -185,6 +184,9 @@ export default function Footer() {
             </a>
             <a href="#" className="text-mda-sand/70 hover:text-mda-sand transition-colors">
               Términos y Condiciones
+            </a>
+              <a href="#" className="text-mda-sand/70 hover:text-mda-sand transition-colors">
+              Politica de Cookies
             </a>
           </div>
         </motion.div>
@@ -201,10 +203,14 @@ export default function Footer() {
           href="https://wa.me/34608529493"
           target="_blank"
           rel="noopener noreferrer"
-          className="w-14 h-14 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 group animate-pulse hover:animate-none"
+          className="w-14 h-14 bg-mda-green backdrop-blur-md hover:bg-mda-green 
+rounded-full flex items-center justify-center 
+shadow-lg hover:shadow-xl transition-all duration-300 
+group animate-pulse hover:animate-none"
+
           title="Contactar por WhatsApp"
         >
-          <FaWhatsapp className="text-2xl text-white group-hover:scale-110 transition-transform" />
+          <FaWhatsapp className="text-4xl text-mda-white group-hover:scale-110 transition-transform" />
         </a>
       </motion.div>
     </footer>

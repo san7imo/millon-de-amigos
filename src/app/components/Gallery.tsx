@@ -96,7 +96,7 @@ export default function Gallery() {
     : galleryImages.filter(img => img.category === activeCategory)
 
   return (
-  <section id="galeria" className="py-20 bg-gradient-green-white">
+  <section id="galeria" className="py-20 bg-withe">
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <motion.div
@@ -106,10 +106,10 @@ export default function Gallery() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-heading text-mda-sand mb-6">
+          <h2 className="text-4xl md:text-5xl font-heading text-mda-green mb-6">
             Galería de Experiencias
           </h2>
-          <p className="text-lg text-mda-sand max-w-3xl mx-auto">
+          <p className="text-lg text-mda-green max-w-3xl mx-auto">
             Un vistazo a los espacios y momentos que te esperan en Millón de Amigos. 
             Cada rincón está diseñado para crear recuerdos inolvidables.
           </p>
