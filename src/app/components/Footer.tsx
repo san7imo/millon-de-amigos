@@ -15,7 +15,10 @@ const quickLinks = [
   { name: 'Millón de Amigos', href: '#quienes-somos' },
   { name: 'Experiencias', href: '#servicios' },
   { name: 'Galería', href: '#galeria' },
-  { name: 'Contacto', href: '#contact' }
+  { name: 'Contacto', href: '#contact' },
+  { name: 'Blog', href: '#' },
+  { name: 'Tienda', href: '#' },
+  { name: 'Alianzas', href: '#' },
 ]
 
 const services = [
@@ -33,7 +36,7 @@ export default function Footer() {
     <footer className="bg-mda-olive text-mda-sand">
       {/* Main Footer Content */}
       <div className="container mx-auto px-6 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-20">
           {/* Company Info */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}

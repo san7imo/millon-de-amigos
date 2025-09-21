@@ -5,6 +5,7 @@ import About from './components/About'
 import Services from './components/Services'
 import Gallery from './components/Gallery'
 import Footer from './components/Footer'
+import TestimonialsCarousel from './components/TestimonialsCarousel'
 
 export default function Page() {
   return (
@@ -15,6 +16,7 @@ export default function Page() {
         <About />
         <Services />
         <Gallery />
+        <TestimonialsCarousel />
                 {/* Temporary Contact Section - will be replaced with full component later */}
         <section id="contact" className="py-20 bg-mda-green">
           <div className="container mx-auto px-6 text-center">
