@@ -35,7 +35,7 @@ export default function Header() {
             <Image 
               src="/images/logo.png" 
               alt="Millón de Amigos Logo" 
-              width={100} 
+              width={150} 
               height={32} 
               className="object-contain"
               priority
@@ -48,11 +48,10 @@ export default function Header() {
 
           {/* Right Section: Menu + CTA + Store */}
           <div className="flex items-center space-x-4">
-
             {/* Store Icon */}
             <a
               href="/tienda"
-              className={`p-2 rounded-md transition-colors ${
+              className={`p-2 rounded-md transition-colors focus:outline-none focus:ring-0 ${
                 isScrolled ? 'text-mda-sand' : 'text-mda-sand'
               }`}
               aria-label="Ir a la tienda"
@@ -63,7 +62,7 @@ export default function Header() {
             {/* Always Mobile Menu Button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className={`p-2 rounded-md transition-colors ${
+              className={`p-2 transition-colors focus:outline-none focus:ring-0 ${
                 isScrolled ? 'text-mda-sand' : 'text-mda-sand'
               }`}
               aria-label="Abrir menú"
@@ -85,30 +84,31 @@ export default function Header() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="mt-4 py-4 bg-mda-sand/95 backdrop-blur-md rounded-lg shadow-lg"
+            className="mt-4 py-4 bg-mda-sand/95 backdrop-blur-md shadow-lg"
           >
             <div className="flex flex-col space-y-4 px-4">
-              {['Inicio', 'Quiénes Somos', 'Experiencias', 'Galería', 'Contacto'].map((item, index) => {
+              {['Inicio', 'Quiénes Somos', 'Experiencias', 'Galería', 'Tienda','Eventos','Blog','Alianzas', 'Contacto'].map((item, index) => {
                 const href = index === 0 ? '#' : `#${item.toLowerCase().replace(' ', '-').replace('é', 'e').replace('í', 'i')}`
                 return (
                   <a
                     key={item}
                     href={href}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="text-mda-olive hover:text-mda-green font-medium py-2 border-b border-mda-olive/10 last:border-b-0"
+                    className="text-mda-olive hover:text-mda-green font-medium py-2 border-b border-mda-olive/10 last:border-b-0 focus:outline-none focus:ring-0"
                   >
                     {item}
                   </a>
                 )
               })}
               {/* CTA also inside mobile */}
-              <a
-                href="#contact"
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="btn-primary bg-mda-green text-mda-sand text-center mt-4 px-4 py-2 text-sm rounded-lg"
-              >
-                Reservar Ahora
-              </a>
+<a
+  href="#contact"
+  onClick={() => setIsMobileMenuOpen(false)}
+  className="btn-primary bg-mda-green text-mda-sand text-center mt-4 px-6 py-2 text-sm rounded-lg focus:outline-none focus:ring-0 w-auto self-center"
+>
+  Reservar Ahora
+</a>
+
             </div>
           </motion.div>
         )}

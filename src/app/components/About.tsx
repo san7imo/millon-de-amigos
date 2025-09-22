@@ -1,7 +1,6 @@
 // app/components/About.tsx
 'use client'
 import { motion } from 'framer-motion'
-import Image from 'next/image'
 import { GiPlantRoots } from "react-icons/gi";
 import { MdHandshake } from "react-icons/md";
 import { FaRegStar } from "react-icons/fa";
@@ -47,7 +46,7 @@ export default function About() {
             <h2 className="text-4xl md:text-5xl font-heading text-mda-sand mb-6">
               Nuestra Historia
             </h2>
-            <div className="space-y-4 text-mda-sand leading-relaxed">
+            <div className="space-y-4 text-justify text-mda-sand leading-relaxed">
               <p>
                 <strong className="text-mda-sand">Millón de Amigos</strong> nació del sueño de crear un espacio 
                 donde las familias, amigos y visitantes pudieran reconectarse con la naturaleza y entre sí, 
@@ -76,14 +75,13 @@ export default function About() {
                 href="#servicios"
                 className="btn-primary bg-mda-sand text-mda-green hover:bg-mda-olive transition-colors inline-flex items-center"
               >
-                Conoce nuestras experiencias
+                Nuestras experiencias
                 <span className="ml-2">→</span>
               </a>
             </motion.div>
           </motion.div>
 
-          {/* Image Placeholder */}
-          {/* Imagen Real - Reemplaza la sección de "Image Placeholder" */}
+          {/* Video en lugar de la imagen */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -91,13 +89,14 @@ export default function About() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="relative"
           >
-            <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
-              <Image
-                src="/images/nuestraHistoria.jpg" 
-                alt="Nuestra Historia - Millón de Amigos" 
+            <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-xl relative">
+              <video
+                src="/videos/nuestraHistoria.mp4"
+                autoPlay
+                loop
+                muted
+                playsInline
                 className="w-full h-full object-cover"
-                width={600}
-                height={450}
               />
               {/* Overlay sutil */}
               <div className="absolute inset-0 bg-gradient-to-t from-mda-green/30 to-transparent rounded-2xl"></div>
@@ -151,7 +150,7 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8 }}
-          className="bg-mda-green  p-8 md:p-12 text-center"
+          className="bg-mda-green p-8 md:p-12 text-center"
         >
           <h3 className="text-3xl md:text-4xl font-heading text-mda-sand mb-4">
             Nuestros Valores

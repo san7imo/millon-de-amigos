@@ -46,7 +46,7 @@ export default function Hero() {
             href="#servicios" 
             className="btn-primary border-2 border-mda-sand text-mda-sand bg-transparent hover:bg-mda-sand hover:text-mda-olive text-lg px-6 py-2 font-semibold"
           >
-            Descubrir Experiencias
+            Reservar Ahora
           </a>
         </motion.div>
       </motion.div>
