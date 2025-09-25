@@ -44,7 +44,7 @@ export default function Hero() {
         >
           <a 
             href="#servicios" 
-            className="btn-primary border-2 border-mda-sand text-mda-sand bg-transparent hover:bg-mda-sand hover:text-mda-olive text-lg px-6 py-2 font-semibold"
+            className="btn-primary rounded-lg border-2 border-mda-sand text-mda-sand bg-transparent hover:bg-mda-sand hover:text-mda-olive text-lg px-6 py-2 font-semibold"
           >
             Reservar Ahora
           </a>

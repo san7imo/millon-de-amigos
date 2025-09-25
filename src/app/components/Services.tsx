@@ -3,6 +3,8 @@
 import { motion } from 'framer-motion'
 import { useState } from 'react'
 
+const phoneNumber = "34608529493" // 👈 Número de WhatsApp del hotel
+
 const services = [
   {
     id: 1,
@@ -51,6 +53,12 @@ const services = [
 export default function Services() {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null)
 
+  const handleWhatsApp = (serviceTitle: string) => {
+    const message = `¡Hola! 👋 Estoy interesado en obtener más información sobre el servicio de "${serviceTitle}". ¿Podrían darme más detalles?`
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
+    window.open(url, "_blank")
+  }
+
   return (
     <section id="servicios" className="py-20 bg-gradient-to-b from-mda-sand to-white">
       <div className="container mx-auto px-6">
@@ -87,46 +95,47 @@ export default function Services() {
               className="group relative"
             >
               <div className={`
+                flex flex-col justify-between
                 p-8 rounded-2xl shadow-lg transition-all duration-300 h-full
                 ${hoveredCard === service.id 
                   ? 'bg-mda-green shadow-2xl transform -translate-y-2' 
                   : 'bg-mda-green backdrop-blur-sm shadow-md'
                 }
               `}>
-      
+                <div>
+                  {/* Title */}
+                  <h3 className="text-xl font-heading font-bold text-mda-sand mb-3">
+                    {service.title}
+                  </h3>
 
-                {/* Title */}
-                <h3 className="text-xl font-heading font-bold text-mda-sand mb-3">
-                  {service.title}
-                </h3>
+                  {/* Description */}
+                  <p className="text-mda-sand mb-4 leading-relaxed">
+                    {service.description}
+                  </p>
 
-                {/* Description */}
-                <p className="text-mda-sand mb-4 leading-relaxed">
-                  {service.description}
-                </p>
+                  {/* Features */}
+                  <ul className="space-y-2 mb-6">
+                    {service.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-center text-sm text-mda-sand">
+                        <span className="w-2 h-2 bg-mda-sand rounded-full mr-3 flex-shrink-0"></span>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
 
-                {/* Features */}
-                <ul className="space-y-2 mb-6">
-                  {service.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-sm text-mda-sand">
-                      <span className="w-2 h-2 bg-mda-sand rounded-full mr-3 flex-shrink-0"></span>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-
-                          {/* CTA */}
-                <div className='flex justify-end'>
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className=" btn-primary bg-mda-sand text-mda-green hover:bg-mda-olive transition-colors"
-                >
-                  Más información
-                </motion.button>
+                {/* CTA */}
+                <div className="flex justify-end mt-4">
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    onClick={() => handleWhatsApp(service.title)}
+                    className="px-4 py-2 text-sm rounded-lg btn-primary bg-mda-accent text-mda-green hover:bg-mda-olive transition-colors"
+                  >
+                    Más Información
+                  </motion.button>
                 </div>
               </div>
-              
             </motion.div>
           ))}
         </div>
@@ -148,10 +157,11 @@ export default function Services() {
               celebrar y conectar con la naturaleza.
             </p>
             <motion.a
-              href="#contact"
+              href={`https://wa.me/${phoneNumber}?text=${encodeURIComponent("¡Hola! 👋 Quiero hacer una reserva en el Centro Vacacional Millón de Amigos.")}`}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="btn-primary bg-mda-sand text-mda-green hover:bg-mda-sand/90 font-bold text-base px-4 py-3"
+              target="_blank"
+              className="btn-primary rounded-lg bg-mda-accent text-mda-green hover:bg-mda-sand/90 font-bold text-base px-4 py-3"
             >
               Reservar Ahora
             </motion.a>

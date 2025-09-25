@@ -73,7 +73,7 @@ export default function About() {
             >
               <a
                 href="#servicios"
-                className="btn-primary bg-mda-sand text-mda-green hover:bg-mda-olive transition-colors inline-flex items-center"
+                className="btn-primary rounded-lg bg-mda-accent text-mda-green hover:bg-mda-olive transition-colors inline-flex items-center"
               >
                 Nuestras experiencias
                 <span className="ml-2">→</span>

@@ -133,9 +133,9 @@ export default function Gallery() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => setActiveCategory(category.id)}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+              className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
                 activeCategory === category.id
-                  ? 'bg-mda-sand text-mda-gren shadow-lg'
+                  ? 'bg-mda-accent text-mda-gren shadow-lg'
                   : 'bg-white/70 text-mda-olive hover:bg-mda-sand/10 border border-mda-sand/20'
               }`}
             >
@@ -240,7 +240,7 @@ export default function Gallery() {
               href="#contact"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="btn-primary bg-mda-sand text-mda-green hover:bg-mda-olive font-bold text-lg px-4 py-2"
+              className="btn-primary rounded-lg bg-mda-accent text-mda-green hover:bg-mda-olive font-bold text-lg px-4 py-2"
             >
               Planifica tu visita
             </motion.a>

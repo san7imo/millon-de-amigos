@@ -5,6 +5,7 @@
   --color-mda-green: #1E3F2E;
   --color-mda-olive: #35372C;
   --color-mda-sand: #FFFFFF;
+  --color-mda-accent: #F2DBB2;
 }
 
 /* Base Styles */
@@ -99,6 +100,7 @@ html {
 .bg-mda-green { background-color: var(--color-mda-green); }
 .bg-mda-olive { background-color: var(--color-mda-olive); }
 .bg-mda-sand { background-color: var(--color-mda-sand); }
+.bg-mda-accent { background-color: var(--color-mda-accent); }
 
 .border-mda-green { border-color: var(--color-mda-green); }
 .border-mda-olive { border-color: var(--color-mda-olive); }

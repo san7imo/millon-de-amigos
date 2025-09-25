@@ -62,7 +62,7 @@ export default function Header() {
             {/* Always Mobile Menu Button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className={`p-2 transition-colors focus:outline-none focus:ring-0 ${
+              className={`p-2 rounded-lg transition-colors focus:outline-none focus:ring-0 ${
                 isScrolled ? 'text-mda-sand' : 'text-mda-sand'
               }`}
               aria-label="Abrir menú"

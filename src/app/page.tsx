@@ -6,6 +6,7 @@ import Services from './components/Services'
 import Gallery from './components/Gallery'
 import Footer from './components/Footer'
 import TestimonialsCarousel from './components/TestimonialsCarousel'
+import { FaWhatsapp, FaMailBulk} from 'react-icons/fa'
 
 export default function Page() {
   return (
@@ -21,20 +22,25 @@ export default function Page() {
         <section id="contact" className="py-20 bg-mda-green">
           <div className="container mx-auto px-6 text-center">
             <h2 className="text-4xl md:text-5xl font-heading text-mda-sand mb-6">
-              ¡Contáctanos!
+              Hablemos de tu próxima experiencia
             </h2>
             <p className="text-mda-sand/90 mb-8 max-w-2xl mx-auto">
-              Estamos listos para hacer de tu visita una experiencia inolvidable. 
-              Escríbenos o llámanos para más información.
+              Nuestro equipo está a tu disposición para acompañarte en cada detalle. Te ofrecemos atención personalizada, confianza y la garantía de respuesta rápida a todas tus inquietudes.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
-                href="tel:+573001234567" 
-                className="btn-primary bg-mda-sand text-mda-green hover:bg-mda-sand/90"
+                href="https://wa.me/34608529493" 
+                className="btn-primary rounded-lg bg-mda-accent text-mda-green hover:bg-mda-sand/90"
               >
-                📞 Llamar ahora
+              <FaWhatsapp className="inline-block mr-2" />
+              Whatsapp
               </a>
-    
+              <a 
+                href="mailto:info@millondeamigos.com"
+                className="btn-primary rounded-lg bg-mda-accent text-mda-green"
+              >
+               <FaMailBulk className='inline-block'></FaMailBulk> Escribenos por correo
+              </a>
             </div>
           </div>
         </section>
