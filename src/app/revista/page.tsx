@@ -22,7 +22,9 @@ const RevistaPage: React.FC = () => {
 
   return (
     <main className="min-h-screen bg-gray-100">
-      <h1 className="text-3xl font-bold text-center pt-8 font-heading text-mda-green">Revista Millón de Amigos</h1>
+      <h1 className="text-3xl font-bold text-center pt-8 font-heading text-mda-green">
+        Revista Millón de Amigos
+      </h1>
       <div className="mt-8 flex justify-center items-center px-4">
         <HTMLFlipBook
           width={isMobile ? 320 : IMAGE_WIDTH}
@@ -41,14 +43,14 @@ const RevistaPage: React.FC = () => {
             return (
               <div
                 key={`pagina-${index}`}
-                className={`page-flip ${isCover ? 'hard' : ''}`}
+                className={`page-flip ${isCover ? 'hard' : ''} bg-mda-accent border border-mda-olive/10`}
               >
                 <Image
                   src={imgSrc}
                   alt={`Página ${index + 1}`}
                   width={isMobile ? 320 : IMAGE_WIDTH}
                   height={isMobile ? 450 : IMAGE_HEIGHT}
-                  className="object-cover select-none"
+                  className="object-cover select-none shadow-lg"
                   draggable={false}
                   priority={false}
                 />
