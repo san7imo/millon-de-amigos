@@ -29,12 +29,25 @@ const RevistaPage: React.FC = () => {
         <HTMLFlipBook
           width={isMobile ? 320 : IMAGE_WIDTH}
           height={isMobile ? 450 : IMAGE_HEIGHT}
+          minWidth={315}
+          maxWidth={1000}
+          minHeight={400}
+          maxHeight={1350}
           size="fixed"
           showCover={true}
           mobileScrollSupport={true}
           drawShadow={true}
           flippingTime={500}
           startPage={0}
+          maxShadowOpacity={0.5}
+          usePortrait={false}
+          startZIndex={0}
+          autoSize={false}
+          clickEventForward={true}
+          useMouseEvents={true}
+          swipeDistance={30}
+          showPageCorners={true}
+          disableFlipByClick={false}
           className="shadow-2xl"
           style={{ touchAction: 'pan-y' }}
         >
