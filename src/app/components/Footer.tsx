@@ -84,7 +84,7 @@ export default function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            <h4 className="text-lg font-heading font-semibold mb-4">Enlaces Rápidos</h4>
+            <h4 className="text-lg font-semibold font-glowen mb-4">Enlaces Rápidos</h4>
             <ul className="space-y-2">
               {quickLinks.map((link) => (
                 <li key={link.name}>
@@ -106,7 +106,7 @@ export default function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <h4 className="text-lg font-heading font-semibold mb-4">Experiencias</h4>
+            <h4 className="text-lg font-glowen font-semibold mb-4">Experiencias</h4>
             <ul className="space-y-2">
               {services.map((service) => (
                 <li key={service.name}>
@@ -128,7 +128,7 @@ export default function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            <h4 className="text-lg font-heading font-semibold mb-4">Síguenos</h4>
+            <h4 className="text-lg font-glowen font-semibold mb-4">Síguenos</h4>
             <div className="flex flex-wrap gap-3 mb-6">
               {socialLinks.map((social) => {
                 const IconComponent = social.icon

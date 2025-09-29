@@ -106,7 +106,7 @@ export default function Gallery() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-heading text-mda-green mb-6">
+          <h2 className="text-4xl font-glowen font-semibold md:text-5xl text-mda-green mb-6">
             Galería de Experiencias
           </h2>
           <p className="text-lg text-mda-green max-w-3xl mx-auto">
@@ -182,7 +182,7 @@ export default function Gallery() {
                 <div className={`absolute bottom-0 left-0 right-0 p-4 transform transition-all duration-300 ${
                   hoveredImage === image.id ? 'translate-y-0 opacity-100' : 'translate-y-2 opacity-0'
                 }`}>
-                  <h3 className="text-mda-sand font-heading font-semibold text-lg mb-1 text-shadow">
+                  <h3 className="text-mda-sand font-glowen font-semibold text-lg mb-1 text-shadow">
                     {image.title}
                   </h3>
                   <p className="text-mda-sand/90 text-sm text-mda-sand capitalize font-medium">
@@ -229,7 +229,7 @@ export default function Gallery() {
           className="text-center mt-16"
         >
           <div className="bg-mda-green backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-mda-sand/50">
-            <h3 className="text-2xl md:text-3xl font-heading text-mda-sand mb-4">
+            <h3 className="text-2xl md:text-3xl font-glowen font-semibold text-mda-sand mb-4">
               ¿Te gustó lo que viste?
             </h3>
             <p className="text-mda-sand mb-8 max-w-2xl mx-auto">
@@ -240,7 +240,7 @@ export default function Gallery() {
               href="#contact"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="btn-primary rounded-lg bg-mda-accent text-mda-green hover:bg-mda-olive font-bold text-lg px-4 py-2"
+              className="btn-primary rounded-lg bg-mda-accent text-mda-green hover:bg-mda-olive font-glowen text-lg px-4 py-2"
             >
               Planifica tu visita
             </motion.a>

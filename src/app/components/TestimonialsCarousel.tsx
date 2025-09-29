@@ -41,8 +41,8 @@ export default function TestimonialsCarousel() {
 
   return (
     <section className="py-16 bg-white overflow-hidden">
-      <h2 className="text-3xl font-bold text-center text-mda-green mb-12">
-        Testimonios de nuestros visitantes
+      <h2 className="text-5xl font-glowen font-semibold text-center text-mda-green mb-12">
+        Testimonios de nuestros Afiliados
       </h2>
 
       <div

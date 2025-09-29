@@ -43,7 +43,7 @@ export default function About() {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
           >
-            <h2 className="text-4xl md:text-5xl font-heading text-mda-sand mb-6">
+            <h2 className="text-4xl md:text-5xl font-glowen font-semibold text-mda-sand mb-6">
               Nuestra Historia
             </h2>
             <div className="space-y-4 text-justify text-mda-sand leading-relaxed">
@@ -73,7 +73,7 @@ export default function About() {
             >
               <a
                 href="#servicios"
-                className="btn-primary rounded-lg bg-mda-accent text-mda-green hover:bg-mda-olive transition-colors inline-flex items-center"
+                className="btn-primary font-glowen rounded-lg bg-mda-accent text-mda-green hover:bg-mda-olive transition-colors inline-flex items-center"
               >
                 Nuestras experiencias
                 <span className="ml-2">→</span>
@@ -134,10 +134,10 @@ export default function About() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="text-center"
             >
-              <div className="text-3xl md:text-4xl font-heading font-bold text-mda-sand mb-2">
+              <div className="text-3xl font-glowen md:text-4xl font-heading font-bold text-mda-sand mb-2">
                 {stat.number}
               </div>
-              <div className="text-sm md:text-base text-mda-sand">
+              <div className="text-sm font-glowen md:text-[20px] text-mda-sand">
                 {stat.label}
               </div>
             </motion.div>
@@ -152,7 +152,7 @@ export default function About() {
           transition={{ duration: 0.8 }}
           className="bg-mda-green p-8 md:p-12 text-center"
         >
-          <h3 className="text-3xl md:text-4xl font-heading text-mda-sand mb-4">
+          <h3 className="text-3xl md:text-4xl font-glowen font-semibold text-mda-sand mb-4">
             Nuestros Valores
           </h3>
           <p className="text-mda-sand max-w-2xl mx-auto">
@@ -171,7 +171,7 @@ export default function About() {
               className="text-center p-6 rounded-xl bg-mda-sand hover:bg-mda-sand/50 transition-colors duration-300"
             >
               <div className="text-4xl flex justify-center items-center mb-4">{value.icon}</div>
-              <h4 className="text-xl font-heading font-bold text-mda-green mb-3">
+              <h4 className="text-xl font-glowen font-bold text-mda-green mb-3">
                 {value.title}
               </h4>
               <p className="text-mda-olive/80 leading-relaxed">

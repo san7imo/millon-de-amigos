@@ -51,6 +51,18 @@ html {
   transform: scale(0.95);
 }
 
+@font-face {
+  font-family: "Glowen";
+  src: url("/fonts/Glowen.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+.font-glowen {
+  font-family: "Glowen", serif;
+}
+
+
 /* Font Heading Styles */
 .font-heading {
   font-family: 'Georgia', 'Times New Roman', serif;

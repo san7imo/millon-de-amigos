@@ -87,7 +87,7 @@ export default function Header() {
             className="mt-4 py-4 bg-mda-sand/95 backdrop-blur-md shadow-lg"
           >
             <div className="flex flex-col space-y-4 px-4">
-              {['Inicio', 'Quiénes Somos', 'Experiencias', 'Galería', 'Tienda','Eventos','Blog','Alianzas', 'Contacto'].map((item, index) => {
+              {['Inicio', 'Quiénes Somos', 'Experiencias', 'Magazine', 'Galería', 'Tienda','Eventos','Blog','Alianzas', 'Contacto'].map((item, index) => {
                 const href = index === 0 ? '#' : `#${item.toLowerCase().replace(' ', '-').replace('é', 'e').replace('í', 'i')}`
                 return (
                   <a
@@ -104,7 +104,7 @@ export default function Header() {
 <a
   href="#contact"
   onClick={() => setIsMobileMenuOpen(false)}
-  className="btn-primary bg-mda-green text-mda-sand text-center mt-4 px-6 py-2 text-sm rounded-lg focus:outline-none focus:ring-0 w-auto self-center"
+  className="btn-primary bg-mda-green font-glowen text-mda-sand text-center mt-4 px-6 py-2 text-sm rounded-lg focus:outline-none focus:ring-0 w-auto self-center"
 >
   Reservar Ahora
 </a>

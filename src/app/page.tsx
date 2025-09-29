@@ -21,7 +21,7 @@ export default function Page() {
                 {/* Temporary Contact Section - will be replaced with full component later */}
         <section id="contact" className="py-20 bg-mda-green">
           <div className="container mx-auto px-6 text-center">
-            <h2 className="text-4xl md:text-5xl font-heading text-mda-sand mb-6">
+            <h2 className="text-4xl md:text-5xl font-glowen font-semibold text-mda-sand mb-6">
               Hablemos de tu próxima experiencia
             </h2>
             <p className="text-mda-sand/90 mb-8 max-w-2xl mx-auto">
@@ -30,14 +30,14 @@ export default function Page() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="https://wa.me/34608529493" 
-                className="btn-primary rounded-lg bg-mda-accent text-mda-green hover:bg-mda-sand/90"
+                className="btn-primary rounded-lg font-glowen bg-mda-accent text-mda-green hover:bg-mda-sand/90"
               >
               <FaWhatsapp className="inline-block mr-2" />
               Whatsapp
               </a>
               <a 
                 href="mailto:info@millondeamigos.com"
-                className="btn-primary rounded-lg bg-mda-accent text-mda-green"
+                className="btn-primary font-glowen rounded-lg bg-mda-accent text-mda-green"
               >
                <FaMailBulk className='inline-block'></FaMailBulk> Escribenos por correo
               </a>
