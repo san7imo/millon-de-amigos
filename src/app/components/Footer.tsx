@@ -2,12 +2,13 @@
 'use client'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import { FaFacebookF, FaInstagram, FaWhatsapp, FaTiktok, FaMapMarkerAlt, FaMobile, FaEnvelope } from 'react-icons/fa'
+import { FaFacebookF, FaInstagram, FaWhatsapp, FaTiktok, FaMapMarkerAlt, FaMobile, FaEnvelope, FaYoutube } from 'react-icons/fa'
 
 const socialLinks = [
   { name: 'Facebook', href: '#', icon: FaFacebookF, color: 'hover:bg-blue-600' },
   { name: 'Instagram', href: '#', icon: FaInstagram, color: 'hover:bg-pink-600' },
-  { name: 'TikTok', href: '#', icon: FaTiktok, color: 'hover:bg-black' }
+  { name: 'TikTok', href: '#', icon: FaTiktok, color: 'hover:bg-black' },
+  { name: 'YouTube', href: '#', icon: FaYoutube, color: 'hover:bg-red-600' },
 ]
 
 const quickLinks = [
@@ -170,29 +171,59 @@ export default function Footer() {
         {/* Divider */}
         <div className="my-8"></div>
 
-        {/* Bottom Section */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="flex flex-col md:flex-row justify-between items-center gap-4"
-        >
-          <div className="text-sm text-mda-sand/70">
-            Copyright {currentYear} © Millón de Amigos. All rights Reserved.
-          </div>
-          <div className="flex gap-6 text-sm">
-            <a href="#" className="text-mda-sand/70 hover:text-mda-sand transition-colors">
-              Política de Privacidad
-            </a>
-            <a href="#" className="text-mda-sand/70 hover:text-mda-sand transition-colors">
-              Términos y Condiciones
-            </a>
-              <a href="#" className="text-mda-sand/70 hover:text-mda-sand transition-colors">
-              Politica de Cookies
-            </a>
-          </div>
-        </motion.div>
+{/* Bottom Section */}
+<motion.div
+  initial={{ opacity: 0 }}
+  whileInView={{ opacity: 1 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.6, delay: 0.4 }}
+  className="flex flex-col md:flex-row justify-between items-center gap-4"
+>
+  <div className="text-sm text-mda-sand/70">
+    Copyright {currentYear} © Millón de Amigos. All rights Reserved.
+  </div>
+  <div className="flex gap-6 text-sm">
+    <a href="#" className="text-mda-sand/70 hover:text-mda-sand transition-colors">
+      Política de Privacidad
+    </a>
+    <a href="#" className="text-mda-sand/70 hover:text-mda-sand transition-colors">
+      Términos y Condiciones
+    </a>
+    <a href="#" className="text-mda-sand/70 hover:text-mda-sand transition-colors">
+      Política de Cookies
+    </a>
+  </div>
+</motion.div>
+
+{/* Credits Line */}
+<motion.div
+  initial={{ opacity: 0 }}
+  whileInView={{ opacity: 1 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.6, delay: 0.5 }}
+  className="mt-3 pt-6 border-t border-mda-sand/20 text-center text-xs text-mda-sand/70"
+>
+  Desarrollado por{" "}
+  <a
+    href="https://ascanio-publishing.com"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="hover:text-mda-sand transition-colors font-semibold"
+  >
+    Ascanio Publishing
+  </a>{" "}
+  – Powered by{" "}
+  <a
+    href="https://san7imo.dev"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="hover:text-mda-sand transition-colors font-semibold"
+  >
+    S7
+  </a>
+</motion.div>
+
+
       </div>
 
       {/* WhatsApp Floating Button */}
@@ -203,7 +234,7 @@ export default function Footer() {
         className="fixed bottom-6 right-6 z-50"
       >
         <a
-          href="https://wa.me/34608529493"
+          href="https://wa.me/34654169480?text=Hola%21%20%F0%9F%91%8B%20Quiero%20hacer%20una%20reserva%20en%20el%20Centro%20Vacacional%20Mill%C3%B3n%20de%20Amigos."
           target="_blank"
           rel="noopener noreferrer"
           className="w-14 h-14 bg-mda-green backdrop-blur-md hover:bg-mda-green 
