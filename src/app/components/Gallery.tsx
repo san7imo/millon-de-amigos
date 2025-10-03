@@ -90,19 +90,22 @@ const categories = [
 export default function Gallery() {
   const [activeCategory, setActiveCategory] = useState('all')
   const [hoveredImage, setHoveredImage] = useState<number | null>(null)
+  const [showAll, setShowAll] = useState(false)
 
-  const filteredImages = activeCategory === 'all' 
-    ? galleryImages 
+  const filteredImages = activeCategory === 'all'
+    ? galleryImages
     : galleryImages.filter(img => img.category === activeCategory)
 
+  const imagesToShow = showAll ? filteredImages : filteredImages.slice(0, 6)
+
   return (
-  <section id="galeria" className="py-20 bg-withe">
+    <section id="galeria" className="py-20 bg-withe">
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
@@ -119,7 +122,7 @@ export default function Gallery() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-50px" }}
+          viewport={{ once: true, margin: '-50px' }}
           transition={{ duration: 0.6, delay: 0.2 }}
           className="flex flex-wrap justify-center gap-3 mb-12"
         >
@@ -132,7 +135,10 @@ export default function Gallery() {
               transition={{ duration: 0.4, delay: index * 0.05 }}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              onClick={() => setActiveCategory(category.id)}
+              onClick={() => {
+                setActiveCategory(category.id)
+                setShowAll(false)
+              }}
               className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
                 activeCategory === category.id
                   ? 'bg-mda-accent text-mda-gren shadow-lg'
@@ -145,62 +151,109 @@ export default function Gallery() {
           ))}
         </motion.div>
 
-        {/* Gallery Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredImages.map((image, index) => (
-            <motion.div
-              key={`${activeCategory}-${image.id}`}
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.8 }}
-              transition={{ 
-                duration: 0.5, 
-                delay: index * 0.1,
-                type: "spring",
-                stiffness: 100
-              }}
-              onHoverStart={() => setHoveredImage(image.id)}
-              onHoverEnd={() => setHoveredImage(null)}
-              className="group relative cursor-pointer"
-            >
-              <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-lg">
-                {/* Imagen real */}
-                <Image
-                  src={image.image} 
-                  alt={image.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                  width={400}
-                  height={300}
-                />
-                
-                {/* Overlay */}
-                <div className={`absolute inset-0 bg-gradient-to-t from-black to-transparent transition-opacity duration-300 ${
-                  hoveredImage === image.id ? 'opacity-100' : 'opacity-0'
-                }`} />
+        {/* Gallery Grid con Overlay */}
+        <div className="relative">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {imagesToShow.map((image, index) => (
+              <motion.div
+                key={`${activeCategory}-${image.id}`}
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.8 }}
+                transition={{
+                  duration: 0.5,
+                  delay: index * 0.1,
+                  type: 'spring',
+                  stiffness: 100
+                }}
+                onHoverStart={() => setHoveredImage(image.id)}
+                onHoverEnd={() => setHoveredImage(null)}
+                className="group relative cursor-pointer"
+              >
+                <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-lg">
+                  {/* Imagen real */}
+                  <Image
+                    src={image.image}
+                    alt={image.title}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    width={400}
+                    height={300}
+                  />
 
-                {/* Content */}
-                <div className={`absolute bottom-0 left-0 right-0 p-4 transform transition-all duration-300 ${
-                  hoveredImage === image.id ? 'translate-y-0 opacity-100' : 'translate-y-2 opacity-0'
-                }`}>
-                  <h3 className="text-mda-sand font-glowen font-semibold text-lg mb-1 text-shadow">
-                    {image.title}
-                  </h3>
-                  <p className="text-mda-sand/90 text-sm text-mda-sand capitalize font-medium">
-                    {image.category}
-                  </p>
-                </div>
+                  {/* Overlay */}
+                  <div
+                    className={`absolute inset-0 bg-gradient-to-t from-black to-transparent transition-opacity duration-300 ${
+                      hoveredImage === image.id ? 'opacity-100' : 'opacity-0'
+                    }`}
+                  />
 
-                {/* View Button */}
-                <div className={`absolute top-4 right-4 transition-all duration-300 ${
-                  hoveredImage === image.id ? 'opacity-100 scale-100' : 'opacity-0 scale-0'
-                }`}>
-                  <button className="w-10 h-10 bg-mda-sand/80 backdrop-blur-sm rounded-full flex items-center justify-center text-mda-olive hover:bg-mda-sand transition-colors shadow-lg">
-                    <span className="text-sm font-bold">👁️</span>
-                  </button>
+                  {/* Content */}
+                  <div
+                    className={`absolute bottom-0 left-0 right-0 p-4 transform transition-all duration-300 ${
+                      hoveredImage === image.id ? 'translate-y-0 opacity-100' : 'translate-y-2 opacity-0'
+                    }`}
+                  >
+                    <h3 className="text-mda-sand font-glowen font-semibold text-lg mb-1 text-shadow">
+                      {image.title}
+                    </h3>
+                    <p className="text-mda-sand/90 text-sm text-mda-sand capitalize font-medium">
+                      {image.category}
+                    </p>
+                  </div>
+
+                  {/* View Button */}
+                  <div
+                    className={`absolute top-4 right-4 transition-all duration-300 ${
+                      hoveredImage === image.id ? 'opacity-100 scale-100' : 'opacity-0 scale-0'
+                    }`}
+                  >
+                    <button className="w-10 h-10 bg-mda-sand/80 backdrop-blur-sm rounded-full flex items-center justify-center text-mda-olive hover:bg-mda-sand transition-colors shadow-lg">
+                      <span className="text-sm font-bold">👁️</span>
+                    </button>
+                  </div>
                 </div>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Overlay Negro con Botón Ver Más */}
+          {filteredImages.length > 6 && !showAll && (
+            <div className="absolute left-0 right-0 bottom-0 -mx-6" style={{ top: 'calc(50% - 80px)' }}>
+              {/* Overlay negro con degradado desde la segunda fila */}
+              <div className="absolute inset-0 bg-gradient-to-b from-black/0 via-black/60 to-black/80 pointer-events-none" />
+              
+              {/* Botón centrado sobre el overlay */}
+              <div className="relative flex justify-center items-center top-20 h-full min-h-[200px]">
+                <motion.button
+                  onClick={() => setShowAll(!showAll)}
+                  whileHover={{ y: 3 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="flex flex-col items-center gap-2 px-8 py-4 bg-transparent text-white hover:text-mda-sand transition-colors group z-10"
+                >
+                  {/* Flecha animada */}
+                  <motion.div
+                    animate={{ y: [0, 8, 0] }}
+                    transition={{ 
+                      duration: 1.5, 
+                      repeat: Infinity,
+                      ease: "easeInOut" 
+                    }}
+                    className="text-4xl drop-shadow-lg"
+                  >
+                    ↓
+                  </motion.div>
+                  
+                  {/* Texto */}
+                  <span className="text-lg font-glowen drop-shadow-lg">
+                    Click para ver más imágenes
+                  </span>
+                  
+                  {/* Línea decorativa debajo */}
+                  <div className="w-24 h-0.5 bg-white/50 group-hover:w-40 group-hover:bg-mda-sand transition-all duration-300" />
+                </motion.button>
               </div>
-            </motion.div>
-          ))}
+            </div>
+          )}
         </div>
 
         {/* Load More / Coming Soon */}
