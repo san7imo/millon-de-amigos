@@ -281,7 +281,7 @@ export default function Gallery() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-center mt-16"
         >
-          <div className="bg-mda-green backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-mda-sand/50">
+          <div className="bg-mda-green backdrop-blur-sm  rounded-2xl p-8 md:p-12 border border-mda-sand/50">
             <h3 className="text-2xl md:text-3xl font-glowen font-semibold text-mda-sand mb-4">
               ¿Te gustó lo que viste?
             </h3>
@@ -296,6 +296,14 @@ export default function Gallery() {
               className="btn-primary rounded-lg bg-mda-accent text-mda-green hover:bg-mda-olive font-glowen text-lg px-4 py-2"
             >
               Planifica tu visita
+            </motion.a>
+                        <motion.a
+              href="/revista"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="btn-primary rounded-lg bg-mda-accent text-mda-green hover:bg-mda-olive font-glowen text-lg px-4 py-2"
+            >
+              Ver Magazine
             </motion.a>
           </div>
         </motion.div>
