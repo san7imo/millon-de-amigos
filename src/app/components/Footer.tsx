@@ -205,22 +205,25 @@ export default function Footer() {
 >
   Desarrollado por{" "}
   <a
-    href="https://ascanio-publishing.com"
+    href="http://ascaniopub.com/"
     target="_blank"
     rel="noopener noreferrer"
     className="hover:text-mda-sand transition-colors font-semibold"
   >
     Ascanio Publishing
-  </a>{" "}
-  – Powered by{" "}
-  <a
-    href="https://san7imo.dev"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="hover:text-mda-sand transition-colors font-semibold"
-  >
-    S7
   </a>
+
+  <div className="mt-1 text-[0.65rem] opacity-60">
+    Powered by{" "}
+    <a
+      href="https://san7imo.dev"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="hover:text-mda-sand transition-colors font-semibold"
+    >
+      S7
+    </a>
+  </div>
 </motion.div>
 
 
