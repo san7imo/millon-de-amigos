@@ -89,7 +89,7 @@ export default function AlmaDelProyecto() {
           <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
             
             {/* Columna Izquierda - Contenido Proyecto */}
-            <div className="text-[#e8dcc4] space-y-6 order-2 lg:order-1">
+            <div className="text-[#e8dcc4] space-y-6 order-2 lg:order-1 border-r border-mda-olive/20 pr-0 lg:pr-10">
               <div className="inline-block px-6 py-2 bg-[#e8dcc4]/10 rounded-full mb-6">
                 <span className="text-sm font-glowen font-semibold tracking-widest uppercase">El Club</span>
               </div>
@@ -115,14 +115,14 @@ export default function AlmaDelProyecto() {
               </div>
             </div>
 
-            {/* Columna Derecha - Imagen 2 */}
+            {/* Columna Derecha - Imagen 2 (ahora noticia1.png) */}
             <div className="relative order-1 lg:order-2">
-              <div className="relative w-full aspect-[3/4] rounded-3xl overflow-hidden shadow-2xl ">
+              <div className="relative w-full aspect-[3/4]  overflow-hidden  ">
                 <Image
-                  src="/images/2.png"
-                  alt="Mariela Torres Zambrano - Samanda"
+                  src="/images/elclub.png"
+                  alt="Country Club Millón de Amigos"
                   fill
-                  className="object-cover"
+                  className="object-contain"
                   priority
                 />
               </div>
@@ -131,34 +131,72 @@ export default function AlmaDelProyecto() {
             </div>
 
           </div>
-
-          {/* Sección Final - Texto Completo Ancho */}
-          <div className="max-w-5xl mx-auto text-center space-y-8 pt-12">
-            <div className="inline-block px-6 py-2 bg-[#e8dcc4]/10 rounded-full mb-6">
-              <span className="text-sm font-glowen font-semibold tracking-widest uppercase text-[#e8dcc4]">Legado y Compromiso</span>
+ {/* Separador Curvo Decorativo */}
+          <div className="relative w-full h-10 my-10 lg:my-10">
+            <svg 
+              className="w-full h-full" 
+              viewBox="0 0 1200 120" 
+              preserveAspectRatio="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path 
+                d="M 0 60 Q 300 0, 600 60 T 1200 60" 
+                stroke="#e8dcc4" 
+                strokeWidth="8" 
+                fill="none"
+                strokeLinecap="round"
+              />
+            </svg>
+          </div>
+          {/* Nueva Sección Final - Legado y Compromiso (con estructura similar a la primera) */}
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            
+            {/* Columna Izquierda - Imagen (ahora usa la 2.png del Club) */}
+            <div className="relative">
+              <div className="relative w-full aspect-[3/4] rounded-3xl overflow-hidden shadow-2xl">
+                <Image
+                  src="/images/2.png"
+                  alt="Samanda Records y legado"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
+              {/* Decoración */}
+              <div className="absolute -bottom-6 -right-6 w-48 h-48 bg-[#e8dcc4]/10 rounded-full -z-10"></div>
             </div>
 
-            <div className="space-y-6 text-base md:text-lg leading-relaxed text-[#e8dcc4]/90">
-              <p>
-                De igual manera, ha incursionado en la industria musical 
-                con la creación de <span className="text-[#e8dcc4] font-semibold">Samanda Records</span>, un sello discográfico 
-                que nace con la misión de visibilizar talento y generar 
-                oportunidades para artistas emergentes y consolidados. Con esta iniciativa, Samanda amplía su compromiso con 
-                la cultura y las artes, integrando música, medios y espiritualidad 
-                bajo una misma visión.
-              </p>
+            {/* Columna Derecha - Texto */}
+            <div className="text-[#e8dcc4] space-y-6">
+              <div className="inline-block px-6 py-2 bg-[#e8dcc4]/10 rounded-full mb-6">
+                <span className="text-sm font-glowen font-semibold tracking-widest uppercase">Legado y Compromiso</span>
+              </div>
 
-              <p>
-                A pesar de sus múltiples responsabilidades, 
-                mantiene un equilibrio entre su 
-                papel como empresaria, autora, guía 
-                espiritual, esposa, madre e hija. Su vida 
-                está guiada por la perseverancia, la fe 
-                y la pasión de dejar un legado en cada 
-                proyecto que emprende.
-              </p>
+              <h2 className="text-4xl md:text-5xl font-glowen leading-tight mb-8">
+                Una huella que trasciende generaciones
+              </h2>
+
+              <div className="space-y-5 text-base md:text-lg leading-relaxed text-[#e8dcc4]/90">
+                <p>
+                  De igual manera, ha incursionado en la industria musical 
+                  con la creación de <span className="text-[#e8dcc4] font-semibold">Samanda Records</span>, un sello discográfico 
+                  que nace con la misión de visibilizar talento y generar 
+                  oportunidades para artistas emergentes y consolidados. Con esta iniciativa, Samanda amplía su compromiso con 
+                  la cultura y las artes, integrando música, medios y espiritualidad 
+                  bajo una misma visión.
+                </p>
+
+                <p>
+                  A pesar de sus múltiples responsabilidades, 
+                  mantiene un equilibrio entre su 
+                  papel como empresaria, autora, guía 
+                  espiritual, esposa, madre e hija. Su vida 
+                  está guiada por la perseverancia, la fe 
+                  y la pasión de dejar un legado en cada 
+                  proyecto que emprende.
+                </p>
+              </div>
             </div>
-
           </div>
 
         </div>
