@@ -5,21 +5,21 @@ import Image from 'next/image'
 import { FaFacebookF, FaInstagram, FaWhatsapp, FaTiktok, FaMapMarkerAlt, FaMobile, FaEnvelope, FaYoutube } from 'react-icons/fa'
 
 const socialLinks = [
-  { name: 'Facebook', href: '#', icon: FaFacebookF, color: 'hover:bg-blue-600' },
-  { name: 'Instagram', href: '#', icon: FaInstagram, color: 'hover:bg-pink-600' },
-  { name: 'TikTok', href: '#', icon: FaTiktok, color: 'hover:bg-black' },
-  { name: 'YouTube', href: '#', icon: FaYoutube, color: 'hover:bg-red-600' },
+  { name: 'Facebook', href: '#', icon: FaFacebookF, color: 'hover:bg-transparent' },
+  { name: 'Instagram', href: '#', icon: FaInstagram, color: 'hover:bg-transparent' },
+  { name: 'TikTok', href: '#', icon: FaTiktok, color: 'hover:bg-transparent' },
+  { name: 'YouTube', href: '#', icon: FaYoutube, color: 'hover:bg-transparent' },
 ]
 
 const quickLinks = [
-  { name: 'Inicio', href: '#' },
-  { name: 'Millón de Amigos', href: '#quienes-somos' },
-  { name: 'Experiencias', href: '#servicios' },
-  { name: 'Galería', href: '#galeria' },
-  { name: 'Contacto', href: '#contact' },
-  { name: 'Blog', href: '#' },
-  { name: 'Tienda', href: '#' },
-  { name: 'Alianzas', href: '#' },
+    { label: 'Inicio', href: '#' },
+    { label: 'El Club', href: '#el-club' },
+    { label: 'Eventos & Celebraciones', href: '#eventos' },
+    { label: 'Galería', href: '#galeria' },
+    { label: 'Noticias / Blog', href: '#blog' },
+    { label: 'Tienda', href: '/tienda' },
+    { label: 'Inspirando Juntos', href: '#inspirando-juntos' },
+    { label: 'Contacto', href: '#contacto' },
 ]
 
 const services = [
@@ -55,8 +55,7 @@ export default function Footer() {
               priority
             />
             <p className="text-mda-sand/80 mb-6 leading-relaxed">
-              Tu centro vacacional en la naturaleza. Donde cada momento se convierte 
-              en un recuerdo inolvidable.
+              Proyecto en desarrollo que nace con la visión de crear un espacio donde la naturaleza, la familia y el bienestar se encuentren en armonía. Muy pronto, cada visita se convertirá en un recuerdo inolvidable.
             </p>
             <div className="space-y-2 text-sm">
               <div className="flex items-center">
@@ -66,7 +65,7 @@ export default function Footer() {
               <div className="flex items-center">
                 <FaMobile className="mr-3 text-mda-sand/80" />
                 <a href="tel:+34608529493" className="text-mda-sand/80 hover:text-mda-sand transition-colors">
-                  +34 608 52 94 93
+                  +34 654 169 480
                 </a>
               </div>
               <div className="flex items-center">
@@ -88,12 +87,12 @@ export default function Footer() {
             <h4 className="text-lg font-semibold font-glowen mb-4">Enlaces Rápidos</h4>
             <ul className="space-y-2">
               {quickLinks.map((link) => (
-                <li key={link.name}>
+                <li key={link.label}>
                   <a
                     href={link.href}
                     className="text-mda-sand/80 hover:text-mda-sand transition-colors duration-200 text-sm"
                   >
-                    {link.name}
+                    {link.label}
                   </a>
                 </li>
               ))}
@@ -130,7 +129,7 @@ export default function Footer() {
             transition={{ duration: 0.6, delay: 0.3 }}
           >
             <h4 className="text-lg font-glowen font-semibold mb-4">Síguenos</h4>
-            <div className="flex flex-wrap gap-3 mb-6">
+            <div className="flex flex-wrap gap-1 mb-6">
               {socialLinks.map((social) => {
                 const IconComponent = social.icon
                 return (
@@ -152,7 +151,7 @@ export default function Footer() {
             <div>
               <h5 className="font-semibold mb-3">Newsletter</h5>
               <p className="text-sm text-mda-sand/80 mb-3">
-                Recibe ofertas especiales y noticias
+               Sé parte del inicio de este sueño. Suscríbete para recibir noticias del proyecto.
               </p>
               <div className="flex">
                 <input
@@ -161,7 +160,7 @@ export default function Footer() {
                   className="flex-1 px-3 py-2 text-sm bg-mda-sand/20 border border-mda-sand/30 rounded-l-md focus:outline-none focus:border-mda-sand text-mda-sand placeholder-mda-sand/60"
                 />
                 <button className="px-4 py-2 bg-mda-sand text-mda-olive text-sm font-semibold rounded-r-md hover:bg-mda-sand/90 transition-colors">
-                  ✓
+                  Suscribirme
                 </button>
               </div>
             </div>
@@ -180,7 +179,7 @@ export default function Footer() {
   className="flex flex-col md:flex-row justify-between items-center gap-4"
 >
   <div className="text-sm text-mda-sand/70">
-    Copyright {currentYear} © Millón de Amigos. All rights Reserved.
+    © {currentYear} Millón de Amigos. Todos los derechos reservados.
   </div>
   <div className="flex gap-6 text-sm">
     <a href="#" className="text-mda-sand/70 hover:text-mda-sand transition-colors">
@@ -212,18 +211,6 @@ export default function Footer() {
   >
     Ascanio Publishing
   </a>
-
-  <div className="mt-1 text-[0.65rem] opacity-60">
-    Powered by{" "}
-    <a
-      href="https://san7imo.dev"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="hover:text-mda-sand transition-colors font-semibold"
-    >
-      S7
-    </a>
-  </div>
 </motion.div>
 
 

@@ -24,7 +24,7 @@ const services = [
     id: 3,
     title: 'Eventos & Retiros',
     description: 'El lugar perfecto para celebraciones especiales, reuniones corporativas y retiros espirituales.',
-    features: ['Salones de eventos', 'Hospedaje', 'Escenarios eventos artisticos'],
+    features: ['Salones de eventos', 'Hospedaje', 'Escenarios para eventos artisticos'],
     icon: '🎉'
   },
   {
@@ -149,13 +149,16 @@ export default function Services() {
           className="text-center mt-16"
         >
           <div className="bg-mda-green rounded-2xl p-8 md:p-12 text-center">
-            <h3 className="text-2xl md:text-3xl font-glowen text-mda-sand mb-4">
-              ¿Listo para vivir la experiencia?
+            <h3 className="text-2xl md:text-3xl font-glowen text-mda-sand mb-2">
+              ¿Listo para vivir la experiencia Millón de Amigos?
             </h3>
-            <p className="text-mda-sand/90 mb-8 max-w-2xl mx-auto">
-              Reserva ahora y descubre por qué somos el destino favorito para descansar, 
-              celebrar y conectar con la naturaleza.
+            <p className="text-mda-sand/90 mb-6 max-w-2xl mx-auto">
+              Tu refugio en la naturaleza te espera.
             </p>
+            <p className="text-mda-sand/90 mb-1 max-w-2xl mx-auto">
+            Descubre el lugar donde la naturaleza, el descanso y las celebraciones se encuentran.
+            </p>
+            <p className="text-mda-sand/90 mb-4 max-w-2xl mx-auto">Tu próxima historia comienza aquí.</p>
             <motion.a
               href={`https://wa.me/${phoneNumber}?text=${encodeURIComponent("¡Hola! 👋 Quiero hacer una reserva en el Centro Vacacional Millón de Amigos.")}`}
               whileHover={{ scale: 1.05 }}
@@ -163,7 +166,7 @@ export default function Services() {
               target="_blank"
               className="btn-primary font-glowen rounded-lg bg-mda-accent text-mda-green hover:bg-mda-sand/90 font-bold text-base px-4 py-3"
             >
-              Reservar Ahora
+              Reserva Ahora
             </motion.a>
           </div>
         </motion.div>

@@ -3,19 +3,19 @@
 import { motion } from 'framer-motion'
 import { GiPlantRoots } from "react-icons/gi";
 import { MdHandshake } from "react-icons/md";
-import { FaRegStar } from "react-icons/fa";
+import { FaRegStar, FaAdjust } from "react-icons/fa";
 
 const stats = [
-  { number: 'En construcción', label: 'Próxima apertura' },
-  { number: '50K+', label: 'Visitantes felices' },
-  { number: '100%', label: 'Satisfacción garantizada' },
-  { number: '24/7', label: 'Atención disponible' }
+  { number: 'En construcción', label: 'Próxima apertura, seguimos avanzando cada día' },
+  { number: '50K+', label: 'Personas conectadas con nuestra visión' },
+  { number: '100%', label: 'Comprometidos con tu bienestar y satisfacción' },
+  { number: '24/7', label: 'Atención disponible para acompañarte en cada etapa' }
 ]
 
 const values = [
   {
     title: 'Conexión Natural',
-    description: 'Creemos en el poder sanador de la naturaleza y en la importancia de reconectarnos con ella.',
+    description: 'Aqui decano el que esta, los otros si le modificamos y agregamos un cuarto valor',
     icon: <GiPlantRoots className="text-4xl text-mda-green " />
   },
   {
@@ -25,8 +25,13 @@ const values = [
   },
   {
     title: 'Experiencias Memorables',
-    description: 'Nos dedicamos a crear momentos únicos que permanecerán en tu corazón para siempre.',
+    description: 'Creamos espacios y momentos únicos que permanecerán en tu memoria, combinando bienestar, tradición y un toque de exclusividad.',
     icon: <FaRegStar className="text-4xl text-mda-green" />
+  },
+    {
+    title: 'Excelencia Sostenible',
+    description: 'Trabajamos con responsabilidad y respeto por el entorno natural, construyendo un futuro en armonía.',
+    icon: <FaAdjust className="text-4xl text-mda-green" />
   }
 ]
 
@@ -49,18 +54,25 @@ export default function About() {
               </h2>
               <div className="space-y-4 text-justify text-mda-sand leading-relaxed">
                 <p>
-                  <strong className="text-mda-sand">Millón de Amigos</strong> está en proceso de construcción, 
-                  pero nació del sueño de crear un espacio donde las familias, amigos y visitantes 
-                  puedan reconectarse con la naturaleza y entre sí, lejos del bullicio de la ciudad.
+                   Un sueño que crece junto a la naturaleza.
                 </p>
                 <p>
-                  Muy pronto abriremos nuestras puertas para ser testigos de nuevas sonrisas, celebraciones 
-                  inolvidables y momentos de paz en este rincón especial de la naturaleza.
+                  <strong className="text-mda-sand">Millón de Amigos</strong> nació del sueño de crear un espacio donde las familias, 
+                  amigos y visitantes puedan reconectarse con la naturaleza y entre sí, lejos del bullicio de la ciudad.
+                </p>
+                <p>
+                  Hoy, este proyecto toma forma como un country club en desarrollo, pensado para brindar bienestar, 
+                  exclusividad y experiencias memorables en un entorno natural incomparable.
+                </p>
+                <p>
+                  Muy pronto abriremos nuestras puertas para dar vida a momentos de alegría, celebración y 
+                  serenidad en este rincón creado para disfrutar la esencia de la naturaleza.
                 </p>
                 <p>
                   Nos preparamos para ofrecer la combinación perfecta entre comodidad moderna y belleza natural, 
-                  creando el ambiente ideal para descansar, celebrar y vivir experiencias únicas.
+                  creando el lugar ideal para descansar, celebrar y vivir experiencias únicas.
                 </p>
+                <a href="/alma-proyecto" className='px-4 py-2 font-glowen text-lg rounded-lg btn-primary bg-mda-accent text-mda-green hover:bg-mda-olive transition-colors'>Alma del proyecto →</a>
               </div>
             </motion.div>
 
@@ -127,47 +139,50 @@ export default function About() {
           </motion.div>
         </div>
       </section>
+{/* Sección Valores */}
+<section className="py-20 bg-mda-olive">
+  <div className="container mx-auto px-6">
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{ duration: 0.8 }}
+      className="p-8 md:p-12 text-center"
+    >
+      <h3 className="text-3xl md:text-4xl font-glowen font-semibold text-mda-sand mb-4">
+        Nuestros Valores
+      </h3>
+      <p className="text-mda-sand max-w-2xl mx-auto">
+        Los principios que nos inspiran y definen la experiencia que muy pronto compartiremos contigo.
+      </p>
+    </motion.div>
 
-      {/* Sección Valores */}
-      <section className="py-20 bg-mda-olive">
-        <div className="container mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8 }}
-            className="p-8 md:p-12 text-center"
-          >
-            <h3 className="text-3xl md:text-4xl font-glowen font-semibold text-mda-sand mb-4">
-              Nuestros Valores
-            </h3>
-            <p className="text-mda-sand max-w-2xl mx-auto">
-              Los principios que nos guían y definen la experiencia que pronto ofreceremos a cada visitante.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {values.map((value, index) => (
-              <motion.div
-                key={value.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
-                className="text-center p-6 rounded-xl bg-mda-sand hover:bg-mda-sand/50 transition-colors duration-300"
-              >
-                <div className="text-4xl flex justify-center items-center mb-4">{value.icon}</div>
-                <h4 className="text-xl font-glowen font-bold text-mda-green mb-3">
-                  {value.title}
-                </h4>
-                <p className="text-mda-olive/80 leading-relaxed">
-                  {value.description}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+    <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+      {values.map((value, index) => (
+        <motion.div
+          key={value.title}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.1, delay: index * 0.2 }}
+          whileHover={{
+            y: -8,
+            boxShadow: '0 8px 20px rgba(47, 107, 50, 0.4)', // brillo verde suave
+          }}
+          className="text-center p-6 rounded-xl bg-mda-sand transition-all duration-300 cursor-default"
+        >
+          <div className="text-4xl flex justify-center items-center mb-4">{value.icon}</div>
+          <h4 className="text-xl font-glowen font-bold text-mda-green mb-8">
+            {value.title}
+          </h4>
+          <p className="text-mda-olive/80 leading-relaxed">
+            {value.description}
+          </p>
+        </motion.div>
+      ))}
+    </div>
+  </div>
+</section>
     </>
   )
 }

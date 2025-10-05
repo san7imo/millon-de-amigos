@@ -19,13 +19,16 @@ export default function Page() {
         <Gallery />
         <TestimonialsCarousel />
                 {/* Temporary Contact Section - will be replaced with full component later */}
-        <section id="contact" className="py-20 bg-mda-green">
+        <section id="contacto" className="py-20 bg-mda-green">
           <div className="container mx-auto px-6 text-center">
-            <h2 className="text-4xl md:text-5xl font-glowen font-semibold text-mda-sand mb-6">
-              Hablemos de tu próxima experiencia
+            <h2 className="text-4xl md:text-5xl font-glowen font-semibold text-mda-sand mb-4">
+              Queremos construir contigo este sueño
             </h2>
             <p className="text-mda-sand/90 mb-8 max-w-2xl mx-auto">
-              Nuestro equipo está a tu disposición para acompañarte en cada detalle. Te ofrecemos atención personalizada, confianza y la garantía de respuesta rápida a todas tus inquietudes.
+            Tu mensaje será atendido personalmente por nuestro equipo.
+            </p>
+            <p className="text-mda-sand/90 mb-8 max-w-2xl mx-auto">
+            Estamos disponibles para resolver tus dudas y contarte más sobre el desarrollo de Millón de Amigos. Escríbenos y se parte de esta experiencia desde sus primeros pasos.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 

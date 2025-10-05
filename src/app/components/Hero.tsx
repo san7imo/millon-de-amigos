@@ -33,7 +33,7 @@ export default function Hero() {
           transition={{ duration: 1, delay: 0.5 }}
           className="text-xl md:text-2xl text-mda-sand/95 mb-8 text-shadow-light font-light"
         >
-          Tu centro vacacional en la naturaleza — donde cada momento se convierte en un recuerdo inolvidable
+          Tu centro vacacional en la naturaleza, dónde cada momento se transforma en un recuerdo inolvidable.
         </motion.p>
 
         <motion.div
@@ -46,7 +46,7 @@ export default function Hero() {
             href="#servicios" 
             className="btn-primary rounded-lg border-2 font-glowen border-mda-sand text-mda-sand bg-transparent hover:bg-mda-sand hover:text-mda-olive text-lg px-6 py-2 font-semibold"
           >
-            Reservar Ahora
+            Reserva Ahora
           </a>
         </motion.div>
       </motion.div>

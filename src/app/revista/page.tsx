@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import HTMLFlipBook from 'react-pageflip';
 import { FaHandPointer } from 'react-icons/fa'; // Ícono de mano// Importamos el ícono de flecha
+import Link from 'next/link';
 
 const TOTAL_PAGINAS = 24;
 const IMAGE_WIDTH = 500;
@@ -29,6 +30,7 @@ const RevistaPage: React.FC = () => {
       <h1 className="text-3xl font-bold text-center pt-8 font-heading text-mda-green">
         Revista Millón de Amigos
       </h1>
+      <Link href="/" className='font-glowen' >Volver al inicio</Link>
       <div className="mt-8 flex justify-center items-center px-4">
         <HTMLFlipBook
           width={bookWidth}
@@ -78,7 +80,7 @@ const RevistaPage: React.FC = () => {
       </div>
 
       {/* Contenedor de texto y ícono */}
- <div className="text-center mt-6 flex flex-col items-center">
+ <div className="text-center mt-6 flex justify-center gap-2 items-center">
   <p className="text-md text-gray-600">Pasa la página</p>
   <FaHandPointer className="text-3xl text-mda-green mt-2 animate-bounce-tap" />
 </div>
