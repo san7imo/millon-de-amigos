@@ -15,7 +15,7 @@ const stats = [
 const values = [
   {
     title: 'Conexión Natural',
-    description: 'Aqui decano el que esta, los otros si le modificamos y agregamos un cuarto valor',
+    description: 'Creemos en el poder sanador de la naturaleza y en la importancia de reconectarnos con ella.',
     icon: <GiPlantRoots className="text-4xl text-mda-green " />
   },
   {

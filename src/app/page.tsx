@@ -6,6 +6,7 @@ import Services from './components/Services'
 import Gallery from './components/Gallery'
 import Footer from './components/Footer'
 import TestimonialsCarousel from './components/TestimonialsCarousel'
+import BlogNoticias from './components/BlogNoticias'
 import { FaWhatsapp, FaMailBulk} from 'react-icons/fa'
 
 export default function Page() {
@@ -47,6 +48,8 @@ export default function Page() {
             </div>
           </div>
         </section>
+        <BlogNoticias />
+
       </main>
       <Footer />
     </>

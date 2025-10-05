@@ -91,7 +91,7 @@ export default function AlmaDelProyecto() {
             {/* Columna Izquierda - Contenido Proyecto */}
             <div className="text-[#e8dcc4] space-y-6 order-2 lg:order-1">
               <div className="inline-block px-6 py-2 bg-[#e8dcc4]/10 rounded-full mb-6">
-                <span className="text-sm font-glowen font-semibold tracking-widest uppercase">El Proyecto</span>
+                <span className="text-sm font-glowen font-semibold tracking-widest uppercase">El Club</span>
               </div>
               
               <h2 className="text-4xl md:text-5xl font-glowen leading-tight mb-8">

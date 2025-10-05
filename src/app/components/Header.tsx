@@ -27,7 +27,7 @@ export default function Header() {
     { label: 'Eventos & Celebraciones', href: '/#servicios' },
     { label: 'Magazine', href: '/revista' },
     { label: 'Galería', href: '/#galeria' },
-    { label: 'Noticias / Blog', href: '/#blog' },
+    { label: 'Blog', href: '/#blog' },
     { label: 'Tienda', href: '/tienda' },
     { label: 'Inspirando Juntos', href: '/#inspirando-juntos' },
     { label: 'Contacto', href: '/#contacto' },

@@ -2,7 +2,16 @@
 'use client'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import { FaFacebookF, FaInstagram, FaWhatsapp, FaTiktok, FaMapMarkerAlt, FaMobile, FaEnvelope, FaYoutube } from 'react-icons/fa'
+import { 
+  FaFacebookF, 
+  FaInstagram, 
+  FaWhatsapp, 
+  FaTiktok, 
+  FaMapMarkerAlt, 
+  FaMobile, 
+  FaEnvelope, 
+  FaYoutube 
+} from 'react-icons/fa'
 
 const socialLinks = [
   { name: 'Facebook', href: '#', icon: FaFacebookF, color: 'hover:bg-transparent' },
@@ -12,14 +21,14 @@ const socialLinks = [
 ]
 
 const quickLinks = [
-    { label: 'Inicio', href: '#' },
-    { label: 'El Club', href: '#el-club' },
-    { label: 'Eventos & Celebraciones', href: '#eventos' },
-    { label: 'Galería', href: '#galeria' },
-    { label: 'Noticias / Blog', href: '#blog' },
-    { label: 'Tienda', href: '/tienda' },
-    { label: 'Inspirando Juntos', href: '#inspirando-juntos' },
-    { label: 'Contacto', href: '#contacto' },
+  { label: 'Inicio', href: '#' },
+  { label: 'El Club', href: '#el-club' },
+  { label: 'Eventos & Celebraciones', href: '#eventos' },
+  { label: 'Galería', href: '#galeria' },
+  { label: 'Noticias / Blog', href: '#blog' },
+  { label: 'Tienda', href: '/tienda' },
+  { label: 'Inspirando Juntos', href: '#inspirando-juntos' },
+  { label: 'Contacto', href: '#contacto' },
 ]
 
 const services = [
@@ -27,17 +36,18 @@ const services = [
   { name: 'Eventos Especiales', href: '#servicios' },
   { name: 'Actividades Familiares', href: '#servicios' },
   { name: 'Hospedaje', href: '#contact' },
-  { name: 'Catering', href: '#contact' }
+  { name: 'Catering', href: '#contact' },
 ]
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="bg-mda-olive text-mda-sand">
+    <footer className="bg-mda-olive text-mda-sand overflow-hidden">
       {/* Main Footer Content */}
       <div className="container mx-auto px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-20">
+          
           {/* Company Info */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -121,7 +131,7 @@ export default function Footer() {
             </ul>
           </motion.div>
 
-          {/* Social & Contact */}
+          {/* Social & Newsletter */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -129,7 +139,7 @@ export default function Footer() {
             transition={{ duration: 0.6, delay: 0.3 }}
           >
             <h4 className="text-lg font-glowen font-semibold mb-4">Síguenos</h4>
-            <div className="flex flex-wrap gap-1 mb-6">
+            <div className="flex flex-wrap gap-2 mb-6">
               {socialLinks.map((social) => {
                 const IconComponent = social.icon
                 return (
@@ -148,18 +158,18 @@ export default function Footer() {
             </div>
 
             {/* Newsletter Signup */}
-            <div>
+            <div className="mt-6">
               <h5 className="font-semibold mb-3">Newsletter</h5>
               <p className="text-sm text-mda-sand/80 mb-3">
-               Sé parte del inicio de este sueño. Suscríbete para recibir noticias del proyecto.
+                Sé parte del inicio de este sueño. Suscríbete para recibir noticias del proyecto.
               </p>
-              <div className="flex">
+              <div className="flex flex-col gap-2">
                 <input
                   type="email"
                   placeholder="Tu email"
-                  className="flex-1 px-3 py-2 text-sm bg-mda-sand/20 border border-mda-sand/30 rounded-l-md focus:outline-none focus:border-mda-sand text-mda-sand placeholder-mda-sand/60"
+                  className="w-full px-3 py-2 text-sm bg-mda-sand/20 border border-mda-sand/30 rounded-md focus:outline-none focus:border-mda-sand text-mda-sand placeholder-mda-sand/60"
                 />
-                <button className="px-4 py-2 bg-mda-sand text-mda-olive text-sm font-semibold rounded-r-md hover:bg-mda-sand/90 transition-colors">
+                <button className=" px-2 py-2 bg-mda-sand text-mda-olive text-sm font-semibold rounded-md hover:bg-mda-sand/90 transition-colors">
                   Suscribirme
                 </button>
               </div>
@@ -170,50 +180,48 @@ export default function Footer() {
         {/* Divider */}
         <div className="my-8"></div>
 
-{/* Bottom Section */}
-<motion.div
-  initial={{ opacity: 0 }}
-  whileInView={{ opacity: 1 }}
-  viewport={{ once: true }}
-  transition={{ duration: 0.6, delay: 0.4 }}
-  className="flex flex-col md:flex-row justify-between items-center gap-4"
->
-  <div className="text-sm text-mda-sand/70">
-    © {currentYear} Millón de Amigos. Todos los derechos reservados.
-  </div>
-  <div className="flex gap-6 text-sm">
-    <a href="#" className="text-mda-sand/70 hover:text-mda-sand transition-colors">
-      Política de Privacidad
-    </a>
-    <a href="#" className="text-mda-sand/70 hover:text-mda-sand transition-colors">
-      Términos y Condiciones
-    </a>
-    <a href="#" className="text-mda-sand/70 hover:text-mda-sand transition-colors">
-      Política de Cookies
-    </a>
-  </div>
-</motion.div>
+        {/* Bottom Section */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="flex flex-col md:flex-row justify-between items-center gap-4"
+        >
+          <div className="text-sm text-mda-sand/70">
+            © {currentYear} Millón de Amigos. Todos los derechos reservados.
+          </div>
+          <div className="flex gap-6 text-sm">
+            <a href="#" className="text-mda-sand/70 hover:text-mda-sand transition-colors">
+              Política de Privacidad
+            </a>
+            <a href="#" className="text-mda-sand/70 hover:text-mda-sand transition-colors">
+              Términos y Condiciones
+            </a>
+            <a href="#" className="text-mda-sand/70 hover:text-mda-sand transition-colors">
+              Política de Cookies
+            </a>
+          </div>
+        </motion.div>
 
-{/* Credits Line */}
-<motion.div
-  initial={{ opacity: 0 }}
-  whileInView={{ opacity: 1 }}
-  viewport={{ once: true }}
-  transition={{ duration: 0.6, delay: 0.5 }}
-  className="mt-3 pt-6 border-t border-mda-sand/20 text-center text-xs text-mda-sand/70"
->
-  Desarrollado por{" "}
-  <a
-    href="http://ascaniopub.com/"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="hover:text-mda-sand transition-colors font-semibold"
-  >
-    Ascanio Publishing
-  </a>
-</motion.div>
-
-
+        {/* Credits Line */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.5 }}
+          className="mt-3 pt-6 border-t border-mda-sand/20 text-center text-xs text-mda-sand/70"
+        >
+          Desarrollado por{" "}
+          <a
+            href="http://ascaniopub.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-mda-sand transition-colors font-semibold"
+          >
+            Ascanio Publishing
+          </a>
+        </motion.div>
       </div>
 
       {/* WhatsApp Floating Button */}
@@ -228,10 +236,9 @@ export default function Footer() {
           target="_blank"
           rel="noopener noreferrer"
           className="w-14 h-14 bg-mda-green backdrop-blur-md hover:bg-mda-green 
-rounded-full flex items-center justify-center 
-shadow-lg hover:shadow-xl transition-all duration-300 
-group animate-pulse hover:animate-none"
-
+          rounded-full flex items-center justify-center 
+          shadow-lg hover:shadow-xl transition-all duration-300 
+          group animate-pulse hover:animate-none"
           title="Contactar por WhatsApp"
         >
           <FaWhatsapp className="text-4xl text-mda-white group-hover:scale-110 transition-transform" />
