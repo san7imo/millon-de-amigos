@@ -43,8 +43,8 @@ const RadioPlayer: React.FC<RadioPlayerProps> = ({
                 <Image
                   src={logoUrl}
                   alt="Radio Logo"
-                  width={306}
-                  height={101}
+                  width={250}
+                  height={60}
                   className="h-full w-auto object-contain rounded border border-neutral-700 shadow-lg"
                 />
               </div>
