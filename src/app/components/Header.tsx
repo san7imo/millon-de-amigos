@@ -40,7 +40,7 @@ export default function Header() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: 'easeOut' }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-[60] transition-all duration-300 ${
         isScrolled ? 'bg-mda-olive/80 backdrop-blur-md shadow-lg' : 'bg-transparent'
       }`}
     >
@@ -117,7 +117,7 @@ export default function Header() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
                   transition={{ duration: 0.3, ease: 'easeInOut' }}
-                  className="absolute top-full right-0 mt-3 py-3 px-4 bg-mda-olive rounded-xl shadow-xl w-max"
+                  className="absolute top-full right-0 mt-3 py-3 px-4 bg-mda-olive rounded-xl shadow-xl w-max z-[70]"
                 >
                   <div className="flex flex-col space-y-2 text-white text-sm font-medium">
                     {menuItems.map((item) => (

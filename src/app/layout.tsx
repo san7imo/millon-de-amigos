@@ -4,6 +4,8 @@ import Script from 'next/script'
 import React from 'react'
 import { Playfair_Display, Inter } from 'next/font/google'
 import { metadata } from './metadata'
+import { RadioProvider } from './providers/RadioProvider'
+import RadioPlayer from './components/RadioPlayer'
 
 // Export metadata for Next.js
 export { metadata }
@@ -82,7 +84,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body className={`antialiased bg-mda-sand text-mda-olive ${inter.className}`}>
+        <RadioProvider>
+          <RadioPlayer />
         {children}
+        </RadioProvider>
       </body>
     </html>
   )
