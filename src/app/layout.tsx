@@ -4,6 +4,7 @@ import Script from 'next/script'
 import React from 'react'
 import { Playfair_Display, Inter } from 'next/font/google'
 import { metadata } from './metadata'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 //import { RadioProvider } from './providers/RadioProvider'
 //import RadioPlayer from './components/RadioPlayer'
 
@@ -85,6 +86,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className={`antialiased bg-mda-sand text-mda-olive ${inter.className}`}>
         {children}
+        <SpeedInsights />
       </body>
     </html>
   )
